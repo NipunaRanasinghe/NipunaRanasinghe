@@ -1,10 +1,12 @@
 
 ### **Overview**
-- Developer - [BallerinaLang](https://ballerina.io/)
-- Senior Software Engineer - [WSO2](https://wso2.com/)
-- Former Research Officer - [Singapore University of Technology and Design](https://www.sutd.edu.sg/)
-- BSc. Eng. (Hons) (1st class) - [University of Moratuwa](https://uom.lk/)
-</br>
+:dancer: Developer - [BallerinaLang](https://ballerina.io/)
+
+:office: Senior Software Engineer - [WSO2](https://wso2.com/)
+
+:microscope: Former Research Officer - [Singapore University of Technology and Design](https://www.sutd.edu.sg/)
+
+:mortar_board: BSc. Eng. (Hons) (1st class) - [University of Moratuwa](https://uom.lk/)
 
 ### Connect with me:
 
