@@ -26,3 +26,4 @@
 [linkedin]: https://www.linkedin.com/in/nipunaranasinghe/
 [medium]: https://medium.com/@nipunaranasinghe
 [instagram]: https://www.instagram.com/i_n_d_r_a_c_h_a_p_a/
+[GitHub followers]: https://img.shields.io/github/followers/:NipunaRanasinghe?label=Follow&style=social
