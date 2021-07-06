@@ -3,7 +3,7 @@
 ### **Overview**
 :dancer: Developer - [BallerinaLang](https://ballerina.io/)
 
-:office: Senior Software Engineer - [WSO2](https://wso2.com/)
+:office: Associate Technical Lead - [WSO2](https://wso2.com/)
 
 :microscope: Former Research Officer - [Singapore University of Technology and Design](https://www.sutd.edu.sg/)
 
