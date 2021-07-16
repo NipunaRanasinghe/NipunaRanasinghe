@@ -1,13 +1,13 @@
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=NipunaRanasinghe&label=Profile%20views&color=0e75b6&style=flat" alt="Nipuna" /> </p>
 
 ### **Overview**
-:dancer: Developer - [BallerinaLang](https://ballerina.io/)
+:dancer: &nbsp;&nbsp; Developer - [BallerinaLang](https://ballerina.io/) </pre>
 
-:office: Associate Technical Lead - [WSO2](https://wso2.com/)
+:office: &nbsp;&nbsp; Associate Technical Lead - [WSO2](https://wso2.com/)
 
-:microscope: Former Research Officer - [Singapore University of Technology and Design](https://www.sutd.edu.sg/)
+:microscope: &nbsp;&nbsp; Former Research Officer - [Singapore University of Technology and Design](https://www.sutd.edu.sg/)
 
-:mortar_board: BSc. Eng. (Hons) (1st class) - [University of Moratuwa](https://uom.lk/)
+:mortar_board: &nbsp;&nbsp; BSc. Eng. (Hons) (1st class) - [University of Moratuwa](https://uom.lk/)
 
 ### Connect with me:
 
