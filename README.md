@@ -13,7 +13,9 @@
 
 [<img align="left" alt="Nipuna | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
 [<img align="left" alt="Nipuna | Medium" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/medium.svg" />][medium]
+[<img align="left" alt="Nipuna | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/twitter.svg" />][twitter]
 [<img align="left" alt="Nipuna | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/instagram.svg" />][instagram]
+[<img align="left" alt="Nipuna | Facebook" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/facebook.svg" />][facebook]
 [<img align="left" alt="Nipuna | Github" src="https://img.shields.io/github/followers/NipunaRanasinghe?label=Follow&style=social" />][github]
 </br>
 </br>
@@ -27,5 +29,7 @@
 
 [linkedin]: https://www.linkedin.com/in/nipunaranasinghe/
 [medium]: https://medium.com/@nipunaranasinghe
+[twitter]: https://twitter.com/indrachapa93
 [instagram]: https://www.instagram.com/i_n_d_r_a_c_h_a_p_a/
+[facebook]: https://www.facebook.com/nipuna3/
 [github]: https://img.shields.io/github/followers/NipunaRanasinghe?label=Follow&style=social
