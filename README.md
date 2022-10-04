@@ -12,9 +12,9 @@
 ### Connect with me:
 
 [<img align="left" alt="Nipuna | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
-[<img align="left" alt="Nipuna | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/medium.svg" />][medium]
-[<img align="left" alt="Nipuna | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/instagram.svg" />][instagram]
-[<img align="left" alt="Nipuna | Twitter" src="https://img.shields.io/github/followers/NipunaRanasinghe?label=Follow&style=social" />][github]
+[<img align="left" alt="Nipuna | Medium" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/medium.svg" />][medium]
+[<img align="left" alt="Nipuna | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/instagram.svg" />][instagram]
+[<img align="left" alt="Nipuna | Github" src="https://img.shields.io/github/followers/NipunaRanasinghe?label=Follow&style=social" />][github]
 </br>
 </br>
 
