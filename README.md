@@ -26,9 +26,9 @@
 
 ---
 ### CodersRank Summary
-<p align="center">
+<p align="left">
   <a href="https://profile.codersrank.io/user/nipunaranasinghe" target="_blank">
-    <img src="https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=summary&username=nipunaranasinghe" alt="CodersRank Summary"/>
+    <img img height="237px" src="https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=summary&username=nipunaranasinghe" alt="CodersRank Summary"/>
   </a>
 </p>
 
