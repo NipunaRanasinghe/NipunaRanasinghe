@@ -25,10 +25,16 @@
 <a href="https://www.adamalston.com/"><img height="137px" src="https://github-readme-stats.vercel.app/api?username=NipunaRanasinghe&hide_title=true&hide_border=true&show_icons=true&include_all_commits=true&count_private=true&line_height=21&text_color=000&icon_color=000&bg_color=0,ea6161,ffc64d,fffc4d,52fa5a&theme=graywhite" /><!-- wi*quL3fcV --><img height="137px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=NipunaRanasinghe&hide=html&hide_title=true&hide_border=true&layout=compact&langs_count=6&exclude_repo=comp426,Redventures-Movie-Quotes&text_color=000&icon_color=fff&bg_color=0,52fa5a,4dfcff,c64dff&theme=graywhite" /></a>
 
 ---
-### CodersRank Summary
+### CodersRank Stats
 <p align="left">
   <a href="https://profile.codersrank.io/user/nipunaranasinghe" target="_blank">
     <img img height="237px" src="https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=summary&username=nipunaranasinghe&badges=2&show-avatar=false&style=--header-bg-color:%23000;--border-radius:10px" alt="CodersRank Summary"/>
+  </a>
+</p>
+
+<p align="left">
+  <a href="https://profile.codersrank.io/user/nipunaranasinghe" target="_blank">
+    <img img height="337px" src="https://cr-skills-chart-widget.azurewebsites.net/api/api?username=nipunaranasinghe&skills=Java,Ballerina,Scala"/>
   </a>
 </p>
 
