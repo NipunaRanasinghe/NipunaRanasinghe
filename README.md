@@ -1,7 +1,6 @@
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=NipunaRanasinghe&label=Profile%20views&color=0e75b6&style=flat" alt="Nipuna" /> </p>
 
-### **Overview**
-:dancer: &nbsp;&nbsp; Developer - [BallerinaLang](https://ballerina.io/) </pre>
+:dancer: &nbsp;&nbsp; Senior Developer - [Ballerina Programming Language Team](https://ballerina.io/) </pre>
 
 :office: &nbsp;&nbsp; Associate Technical Lead - [WSO2](https://wso2.com/)
 
@@ -10,7 +9,6 @@
 :mortar_board: &nbsp;&nbsp; BSc. Eng. (Hons) (1st class) - [University of Moratuwa](https://uom.lk/)
 
 ### Connect with me:
-
 [<img align="left" alt="Nipuna | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
 [<img align="left" alt="Nipuna | Medium" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/medium.svg" />][medium]
 [<img align="left" alt="Nipuna | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/twitter.svg" />][twitter]
@@ -19,6 +17,10 @@
 [<img align="left" alt="Nipuna | Github" src="https://img.shields.io/github/followers/NipunaRanasinghe?label=Follow&style=social" />][github]
 </br>
 </br>
+
+---
+### Certifications
+[![CKAD Badge](https://img.shields.io/badge/-Certified_Kubernetes_Application_Developer-326CE5?style=flat&logo=kubernetes&logoColor=white&link=https://www.credly.com/badges/bf9a8b51-043b-4487-ae7e-b608891c32e8/public_url)](https://www.credly.com/badges/bf9a8b51-043b-4487-ae7e-b608891c32e8/public_url)
 
 ---
 ### GitHub Stats
