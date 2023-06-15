@@ -26,7 +26,7 @@
 ### CodersRank Stats
 <p align="left">
   <a href="https://profile.codersrank.io/user/nipunaranasinghe" target="_blank">
-    <img img height="237px" src="https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=summary&username=nipunaranasinghe&show-avatar=false&badges=3&style=--header-bg-color:%23000;--border-radius:10px"/>
+    <img img height="237px" src="https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=summary&username=nipunaranasinghe&show-avatar=false&badges=2&style=--header-bg-color:%23000;--border-radius:10px"/>
   </a>
 </p>
 
