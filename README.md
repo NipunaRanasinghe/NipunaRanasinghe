@@ -8,7 +8,7 @@
 
 :microscope: &nbsp;&nbsp; Former Research Officer in Machine Learning - [Singapore University of Technology and Design](https://www.sutd.edu.sg/)
 
-:mortar_board: &nbsp;&nbsp; BSc in Engineering (1st class) - [University of Moratuwa](https://uom.lk/)
+:mortar_board: &nbsp;&nbsp; B.Sc. in Engineering (1st class) - [University of Moratuwa](https://uom.lk/)
 
 ### Connect with me:
 [<img align="left" alt="Nipuna | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
