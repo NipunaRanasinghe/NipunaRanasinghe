@@ -1,6 +1,6 @@
-![](https://github.com/nipunaranasinghe/nipunaranasinghe/blob/master/cover.png)
-
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=NipunaRanasinghe&label=Profile%20views&color=0e75b6&style=flat" alt="Nipuna" /> </p>
+
+![](https://github.com/nipunaranasinghe/nipunaranasinghe/blob/master/cover.png)
 
 :dancer: &nbsp;&nbsp; Senior Developer - [Ballerina Programming Language Team](https://ballerina.io/) </pre>
 
