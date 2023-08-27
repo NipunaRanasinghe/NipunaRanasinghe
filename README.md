@@ -1,4 +1,4 @@
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=NipunaRanasinghe&label=Profile%20views&color=0e75b6&style=flat" alt="Nipuna" /> </p>
+<img src="https://komarev.com/ghpvc/?username=NipunaRanasinghe&label=Profile%20views&color=0e75b6&style=flat" alt="Nipuna" /> <img src="https://img.shields.io/github/followers/NipunaRanasinghe?label=Follow&style=social" alt="Nipuna" />
 
 ![](https://github.com/nipunaranasinghe/nipunaranasinghe/blob/master/cover.png)
 
