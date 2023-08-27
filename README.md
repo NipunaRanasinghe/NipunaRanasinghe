@@ -2,6 +2,8 @@
 
 ![](https://github.com/nipunaranasinghe/nipunaranasinghe/blob/master/cover.png)
 
+---
+### About Me:
 :dancer: &nbsp;&nbsp; Senior Developer - [Ballerina Programming Language Team](https://ballerina.io/) </pre>
 
 :office: &nbsp;&nbsp; Associate Technical Lead - [WSO2](https://wso2.com/)
