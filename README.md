@@ -10,14 +10,13 @@
 
 :mortar_board: &nbsp;&nbsp; B.Sc. in Engineering (1st class) - [University of Moratuwa](https://uom.lk/)
 
-### Connect with me:
-[<img align="left" alt="Nipuna | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
-[<img align="left" alt="Nipuna | Medium" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/medium.svg" />][medium]
-[<img align="left" alt="Nipuna | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/twitter.svg" />][twitter]
-[<img align="left" alt="Nipuna | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/instagram.svg" />][instagram]
-[<img align="left" alt="Nipuna | Facebook" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/facebook.svg" />][facebook]
-[<img align="left" alt="Nipuna | Github" src="https://img.shields.io/github/followers/NipunaRanasinghe?label=Follow&style=social" />][github]
-</br>
+---
+### Connect:
+[<img align="left" alt="Nipuna | LinkedIn" width="100px" height="25px" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />][linkedin]
+[<img align="left" alt="Nipuna | Medium" width="100px" height="25px" src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" />][medium]
+[<img align="left" alt="Nipuna | Twitter" width="100px" height="25px" src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" />][twitter]
+[<img align="left" alt="Nipuna | Instagram" width="100px" height="25px" src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />][instagram]
+[<img align="left" alt="Nipuna | Facebook" width="100px" height="25px" src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" />][facebook]
 </br>
 
 ---
@@ -29,12 +28,6 @@
 <p align="left">
   <a href="https://profile.codersrank.io/user/nipunaranasinghe" target="_blank">
     <img img height="237px" src="https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=summary&username=nipunaranasinghe&badges=3&show-avatar=false&style=--header-bg-color:%23000;--border-radius:10px"/>
-  </a>
-</p>
-
-<p align="left">
-  <a href="https://profile.codersrank.io/user/nipunaranasinghe" target="_blank">
-    <img img height="337px" src="https://cr-skills-chart-widget.azurewebsites.net/api/api?username=nipunaranasinghe&skills=Java,Ballerina,Scala"/>
   </a>
 </p>
 
