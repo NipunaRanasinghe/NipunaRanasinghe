@@ -8,7 +8,7 @@
 ### About Me:
 :dancer: &nbsp;&nbsp; Senior Developer - [Ballerina Programming Language Team](https://ballerina.io/) </pre>
 
-:office: &nbsp;&nbsp; Associate Technical Lead - [WSO2](https://wso2.com/)
+:office: &nbsp;&nbsp; Technical Lead - [WSO2](https://wso2.com/)
 
 :microscope: &nbsp;&nbsp; Former Research Officer in Machine Learning - [Singapore University of Technology and Design](https://www.sutd.edu.sg/)
 
