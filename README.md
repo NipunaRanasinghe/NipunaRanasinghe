@@ -1,7 +1,7 @@
 [<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=0:002e85,100:007a85&height=210&section=header&text=Welcome%20to%20my%20profile!&desc=Lets%20connect%20through%20code!&fontSize=30&descAlignY=50&fontAlignY=30&animation=fadeIn&fontColor=fff">](https://capsule-render.vercel.app/api?type=waving&height=200&color=gradient&text=Welcome%20to%20my%20profile!&section=header&reversal=false&textBg=false&animation=fadeIn&desc=Lets%20connect%20through%20code!&fontAlignY=30&fontAlign=50&fontSize=50&descSize=27&descAlignY=57)
 
 
-<img src="https://komarev.com/ghpvc/?username=NipunaRanasinghe&label=Profile%20views&color=0e75b6&style=flat" alt="Nipuna" /> <img src="https://img.shields.io/github/followers/NipunaRanasinghe?label=Follow&style=social" alt="Nipuna" />
+<img src="https://komarev.com/ghpvc/?username=NipunaRanasinghe&label=Profile%20views&color=0e75b6&style=flat" alt="Nipuna" /> <img src="https://user-badge.committers.top/sri_lanka_public/NipunaRanasinghe.svg" alt="Nipuna" /> <img src="https://img.shields.io/github/followers/NipunaRanasinghe?label=Follow&style=social" alt="Nipuna" />
 
 ---
 ### About Me:
