@@ -38,13 +38,13 @@
   <a href="https://github.com/ashutosh00710/github-readme-activity-graph"><img alt="Nipuna's Activity Graph" src="https://github-readme-activity-graph.vercel.app/graph/?username=NipunaRanasinghe&bg_color=1F222E&color=F8D866&line=F85D7F&point=FFFFFF&hide_border=true" /></a>
 
 ![GitHub Trophy](https://github-profile-trophy.vercel.app/?username=NipunaRanasinghe&theme=matrix&no-frame=true&no-bg=true&margin-w=4)
----
 
+---
 ### Certifications:
 [![CKAD Badge](https://img.shields.io/badge/-Certified_Kubernetes_Application_Developer-326CE5?style=flat&logo=kubernetes&logoColor=white&link=https://www.credly.com/badges/bf9a8b51-043b-4487-ae7e-b608891c32e8/public_url)](https://www.credly.com/badges/bf9a8b51-043b-4487-ae7e-b608891c32e8/public_url)
----
 
-### 📝 My Latest Blog Posts in Medium
+---
+### Latest Blog Posts in Medium
 - <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/0"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/0" alt="Recent Article 0"></a>
 - <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/1"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/1" alt="Recent Article 1"></a>
 - <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/2"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/2" alt="Recent Article 2"></a> 
