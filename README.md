@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=venom&height=300&color=gradient&text=Hey👋%20I'm%20Nipuna%20Ranasinghe!&section=header&reversal=false&textBg=false&fontColor=404040&animation=twinkling&fontSize=50&desc=Lets%20connect%20through%20code!)
+![header](https://capsule-render.vercel.app/api?type=venom&height=300&color=gradient&text=Hey!%20👋%20I'm%20Nipuna%20Ranasinghe&section=header&reversal=false&textBg=false&fontColor=404040&animation=twinkling&fontSize=50&desc=Lets%20connect%20through%20code)
 
 <img src="https://komarev.com/ghpvc/?username=NipunaRanasinghe&label=Profile%20views&color=0e75b6&style=flat" alt="Nipuna" /> <img src="https://user-badge.committers.top/sri_lanka_public/NipunaRanasinghe.svg" alt="Nipuna" /> <img src="https://img.shields.io/github/followers/NipunaRanasinghe?label=Follow&style=social" alt="Nipuna" />
 
