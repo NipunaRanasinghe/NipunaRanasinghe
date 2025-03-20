@@ -41,12 +41,6 @@
 ### Certifications:
 [![CKAD Badge](https://img.shields.io/badge/-Certified_Kubernetes_Application_Developer-326CE5?style=flat&logo=kubernetes&logoColor=white&link=https://www.credly.com/badges/bf9a8b51-043b-4487-ae7e-b608891c32e8/public_url)](https://www.credly.com/badges/bf9a8b51-043b-4487-ae7e-b608891c32e8/public_url)
 
----
-### Latest Blog Posts in Medium
-- <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/0"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/0" alt="Recent Article 0"></a>
-- <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/1"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/1" alt="Recent Article 1"></a>
-- <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/2"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/2" alt="Recent Article 2"></a> 
-<br>
 
 [linkedin]: https://www.linkedin.com/in/nipunaranasinghe/
 [medium]: https://medium.com/@nipunaranasinghe
