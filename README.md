@@ -4,7 +4,7 @@
 
 ---
 ### About Me:
-:dancer: &nbsp;&nbsp; Senior Developer - [Ballerina Programming Language Team](https://ballerina.io/) </pre>
+:dancer: &nbsp;&nbsp; Lead Developer - [Ballerina Programming Language and WSO2 Ballerina Integrator](https://ballerina.io/) </pre>
 
 :office: &nbsp;&nbsp; Technical Lead - [WSO2](https://wso2.com/)
 
