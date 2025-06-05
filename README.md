@@ -42,6 +42,12 @@
 ### Certifications:
 [![CKAD Badge](https://img.shields.io/badge/-Certified_Kubernetes_Application_Developer-326CE5?style=flat&logo=kubernetes&logoColor=white&link=https://www.credly.com/badges/bf9a8b51-043b-4487-ae7e-b608891c32e8/public_url)](https://www.credly.com/badges/bf9a8b51-043b-4487-ae7e-b608891c32e8/public_url)
 
+---
+### Latest Blog posts:
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
+
+
 
 [linkedin]: https://www.linkedin.com/in/nipunaranasinghe/
 [medium]: https://medium.com/@nipunaranasinghe
