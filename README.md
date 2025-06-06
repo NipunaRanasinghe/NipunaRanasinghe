@@ -4,11 +4,11 @@
 
 ---
 ### About Me:
-:computer: &nbsp;&nbsp; **Lead Developer** - [Ballerina Programming Language](https://ballerina.io/) and [WSO2 Ballerina Integrator](https://wso2.com/integrator/ballerina-integrator/) - *Pioneering advancements in Ballerina to enhance developer productivity for integration solutions.*
+:computer: &nbsp;&nbsp; **Lead Developer** - [Ballerina Programming Language](https://ballerina.io/) and [WSO2 Ballerina Integrator](https://wso2.com/integrator/ballerina-integrator/)
 
-:office: &nbsp;&nbsp; **Technical Lead** - [WSO2](https://wso2.com/) - *Leading teams to deliver cutting-edge enterprise integration products.*
+:office: &nbsp;&nbsp; **Technical Lead** - [WSO2](https://wso2.com/)
 
-:microscope: &nbsp;&nbsp; **Former Research Officer in Machine Learning** - [Singapore University of Technology and Design](https://www.sutd.edu.sg/) - *Researched and developed ML models for [mention a specific area if you wish, e.g., anomaly detection].*
+:microscope: &nbsp;&nbsp; **Former Research Officer in Machine Learning** - [Singapore University of Technology and Design](https://www.sutd.edu.sg/)
 
 :mortar_board: &nbsp;&nbsp; **B.Sc. in Engineering (1st class)** - [University of Moratuwa](https://uom.lk/)
 
