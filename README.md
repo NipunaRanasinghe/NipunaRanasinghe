@@ -14,15 +14,6 @@
 
 
 ---
-### Connect:
-[<img align="left" alt="Nipuna | LinkedIn" width="100px" height="25px" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />][linkedin]
-[<img align="left" alt="Nipuna | Medium" width="100px" height="25px" src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" />][medium]
-[<img align="left" alt="Nipuna | Twitter" width="100px" height="25px" src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" />][twitter]
-[<img align="left" alt="Nipuna | Instagram" width="100px" height="25px" src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />][instagram]
-[<img align="left" alt="Nipuna | Facebook" width="100px" height="25px" src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" />][facebook]
-</br>
-
----
 ### Languages and Tools:
 <div style="display: flex; align-items: flex-start;"><img src="https://techstack-generator.vercel.app/java-icon.svg" alt="icon" width="65" height="65" /><img src="https://techstack-generator.vercel.app/python-icon.svg" alt="icon" width="65" height="65" /><img src="https://techstack-generator.vercel.app/raspberrypi-icon.svg" alt="icon" width="65" height="65" /><img src="https://techstack-generator.vercel.app/docker-icon.svg" alt="icon" width="65" height="65" /><img src="https://techstack-generator.vercel.app/kubernetes-icon.svg" alt="icon" width="65" height="65" /><img src="https://techstack-generator.vercel.app/graphql-icon.svg" alt="icon" width="65" height="65" /><img src="https://techstack-generator.vercel.app/restapi-icon.svg" alt="icon" width="65" height="65" /><img src="https://techstack-generator.vercel.app/react-icon.svg" alt="icon" width="65" height="65" /><img src="https://techstack-generator.vercel.app/github-icon.svg" alt="icon" width="65" height="65" /></div>
 
@@ -41,6 +32,15 @@
 ---
 ### Certifications:
 [![CKAD Badge](https://img.shields.io/badge/-Certified_Kubernetes_Application_Developer-326CE5?style=flat&logo=kubernetes&logoColor=white&link=https://www.credly.com/badges/bf9a8b51-043b-4487-ae7e-b608891c32e8/public_url)](https://www.credly.com/badges/bf9a8b51-043b-4487-ae7e-b608891c32e8/public_url)
+
+---
+### Connect:
+[<img align="left" alt="Nipuna | LinkedIn" width="100px" height="25px" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />][linkedin]
+[<img align="left" alt="Nipuna | Medium" width="100px" height="25px" src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" />][medium]
+[<img align="left" alt="Nipuna | Twitter" width="100px" height="25px" src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" />][twitter]
+[<img align="left" alt="Nipuna | Instagram" width="100px" height="25px" src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />][instagram]
+[<img align="left" alt="Nipuna | Facebook" width="100px" height="25px" src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" />][facebook]
+</br>
 
 ---
 ### Latest Blog posts:
