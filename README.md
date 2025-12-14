@@ -1,9 +1,6 @@
-![header](https://capsule-render.vercel.app/api?type=venom&height=300&color=gradient&text=Hey%20Im%20Nipuna%20Ranasinghe&section=header&fontColor=404040&animation=twinkling&fontSize=50&desc=Designing%20cloud-native%20integration%20platforms%20and%20developer%20tooling%20at%20scale)
+![header](https://capsule-render.vercel.app/api?type=venom&height=300&color=gradient&text=Hey%20👋%20I'm%20Nipuna%20Ranasinghe&section=header&fontColor=404040&animation=twinkling&fontSize=50&desc=Let's%20connect%20through%20code!)
 
-<img src="https://komarev.com/ghpvc/?username=NipunaRanasinghe&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views" /> 
-<img src="https://user-badge.committers.top/sri_lanka_public/NipunaRanasinghe.svg" alt="Top Committer in Sri Lanka" /> 
-<img src="https://img.shields.io/github/followers/NipunaRanasinghe?label=Follow&style=social" alt="GitHub Followers" />
-
+<img src="https://komarev.com/ghpvc/?username=NipunaRanasinghe&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views" /> <img src="https://user-badge.committers.top/sri_lanka_public/NipunaRanasinghe.svg" alt="Top Committer in Sri Lanka" /> <img src="https://img.shields.io/github/followers/NipunaRanasinghe?label=Follow&style=social" alt="GitHub Followers" />
 ---
 
 ### 👨‍💻 About Me
