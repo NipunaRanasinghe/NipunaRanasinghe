@@ -52,14 +52,6 @@
 
 ---
 
-### 📈 Contribution Activity
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=NipunaRanasinghe&theme=react-dark&hide_border=true&bg_color=1F222E&color=F85D7F&line=F85D7F&point=F8D866&area=true" alt="Activity Graph" />
-</p>
-
----
-
 ### 🧾 Certifications
 
 [![CKAD Badge](https://img.shields.io/badge/-Certified_Kubernetes_Application_Developer-326CE5?style=flat&logo=kubernetes&logoColor=white)](https://www.credly.com/badges/bf9a8b51-043b-4487-ae7e-b608891c32e8/public_url)
