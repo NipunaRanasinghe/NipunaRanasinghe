@@ -1,12 +1,12 @@
 ![header](https://capsule-render.vercel.app/api?type=waving&height=250&color=gradient&text=Hey%20%F0%9F%91%8B%20I'm%20Nipuna%20Ranasinghe&section=header&fontColor=ffffff&animation=twinkling&fontSize=40)
 
 <p align="center">
-  <em>Tech Lead at WSO2 — 8 years building the developer tools behind integration products.</em>
+  <em>Tech Lead @ <a href="https://wso2.com/">WSO2</a> &nbsp;·&nbsp; Core contributor to <a href="https://ballerina.io/">Ballerina</a> &nbsp;·&nbsp; Building the tools developers build with</em>
 </p>
 
 <p align="center">
   <a href="https://github.com/NipunaRanasinghe">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1000&color=F85D7F&center=true&vCenter=true&width=650&lines=Building+the+developer+tools+behind+Ballerina;Open+Source+Contributor+%26+Maintainer;Mentor+%26+Lifelong+Learner;Exploring+AI+Agents%2C+lately" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1000&color=F85D7F&center=true&vCenter=true&width=650&lines=Language+servers%2C+IDE+tooling+%26+low-code+platforms;8+years+in+integration+%26+developer+products;Open-source+maintainer+%26+mentor;Exploring+AI+agents%2C+lately" alt="Typing SVG" />
   </a>
 </p>
 
@@ -14,11 +14,13 @@
 
 ---
 
-### 🚀 Now
+### 🔧 Featured Projects
 
-- 🤖 Building AI-assisted integration capabilities in [WSO2 Integrator: BI](https://wso2.com/integrator/ballerina-integrator/) — bringing LLM-powered flows to a low-code platform
-- 🧩 Evolving the [Ballerina Language Server](https://github.com/ballerina-platform/ballerina-language-server) — the language intelligence behind every Ballerina IDE experience
-- 📖 Researching AI agent architectures and curating what I learn in [awesome-ai-agents](https://github.com/NipunaRanasinghe/awesome-ai-agents)
+- 🧩 [**Ballerina Language Server**](https://github.com/ballerina-platform/ballerina-language-server) — Core maintainer of the LSP implementation that powers code intelligence for every Ballerina developer, in VS Code and the Integrator's config editor
+- 🔌 [**WSO2 Integrator: BI**](https://github.com/wso2/vscode-extensions) — Core contributor to the low-code, AI-powered integration platform built on Ballerina
+- 🛠️ [**lsp4intellij**](https://github.com/ballerina-platform/lsp4intellij) — Maintainer of an LSP client library that lets any JetBrains IDE plugin speak the Language Server Protocol &nbsp;[![Stars](https://img.shields.io/github/stars/ballerina-platform/lsp4intellij?style=flat&logo=github&label=%E2%98%85&labelColor=1F222E&color=F85D7F)](https://github.com/ballerina-platform/lsp4intellij/stargazers)
+- 🤖 [**awesome-ai-agents**](https://github.com/NipunaRanasinghe/awesome-ai-agents) — Author of a curated list of frameworks, tools & resources for building AI agents &nbsp;[![Stars](https://img.shields.io/github/stars/NipunaRanasinghe/awesome-ai-agents?style=flat&logo=github&label=%E2%98%85&labelColor=1F222E&color=F85D7F)](https://github.com/NipunaRanasinghe/awesome-ai-agents/stargazers)
+- 📚 [**awesome-ballerina**](https://github.com/NipunaRanasinghe/awesome-ballerina) — Author of a curated collection of learning materials, libraries & tools for the Ballerina language
 
 ---
 
@@ -41,16 +43,6 @@ I started in machine learning research and moved into developer tooling — and 
   </a>
   <img src="https://skillicons.dev/icons?i=java,go,python,kotlin,ts,kubernetes,docker,linux,git,idea,vscode,bash,gradle,aws" alt="Tech stack" />
 </p>
-
----
-
-### 🔧 Featured Projects
-
-- 🧩 [**Ballerina Language Server**](https://github.com/ballerina-platform/ballerina-language-server) — Core maintainer of the LSP implementation that powers code intelligence for every Ballerina developer, in VS Code and the Integrator's config editor
-- 🔌 [**WSO2 Integrator: BI**](https://github.com/wso2/vscode-extensions) — Core contributor to the low-code, AI-powered integration platform built on Ballerina
-- 🛠️ [**lsp4intellij**](https://github.com/ballerina-platform/lsp4intellij) — Maintainer of an LSP client library that lets any JetBrains IDE plugin speak the Language Server Protocol &nbsp;[![Stars](https://img.shields.io/github/stars/ballerina-platform/lsp4intellij?style=flat&logo=github&label=%E2%98%85&labelColor=1F222E&color=F85D7F)](https://github.com/ballerina-platform/lsp4intellij/stargazers)
-- 🤖 [**awesome-ai-agents**](https://github.com/NipunaRanasinghe/awesome-ai-agents) — Author of a curated list of frameworks, tools & resources for building AI agents &nbsp;[![Stars](https://img.shields.io/github/stars/NipunaRanasinghe/awesome-ai-agents?style=flat&logo=github&label=%E2%98%85&labelColor=1F222E&color=F85D7F)](https://github.com/NipunaRanasinghe/awesome-ai-agents/stargazers)
-- 📚 [**awesome-ballerina**](https://github.com/NipunaRanasinghe/awesome-ballerina) — Author of a curated collection of learning materials, libraries & tools for the Ballerina language
 
 ---
 
@@ -89,14 +81,15 @@ I started in machine learning research and moved into developer tooling — and 
 
 ### ✍️ Latest Blog Posts
 
-<!-- BLOG-POST-LIST:START -->
-- [The Great Illusion of Enterprise Integration](https://nipunaranasinghe.medium.com/the-great-illusion-of-enterprise-integration-8900085e7428) — May 2026
-- [Five Years with Ballerina: Lessons from Building in Open Source](https://nipunaranasinghe.medium.com/my-5-year-journey-with-ballerina-embracing-open-source-from-day-one-ec3630a71b7e) — Jan 2024
-- [Introduction to Ballerina Semantic Versioning Validator](https://medium.com/ballerina-techblog/an-introduction-to-ballerina-semantic-versioning-validator-956d4884b121) — Sep 2022
-- [Ballerina Hello World: The IntelliJ Style!](https://nipunaranasinghe.medium.com/ballerina-hello-world-the-intellij-style-23b7c5da29d7) — Apr 2021
-<!-- BLOG-POST-LIST:END -->
-
-➕ More on [Medium](https://medium.com/@nipunaranasinghe)
+- <a href="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/0" target="_blank">
+    <img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/0" alt="Recent Article 0">
+  </a>
+- <a href="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/1" target="_blank">
+    <img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/1" alt="Recent Article 1">
+  </a>
+- <a href="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/2" target="_blank">
+    <img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/2" alt="Recent Article 2">
+  </a>
 
 ---
 
