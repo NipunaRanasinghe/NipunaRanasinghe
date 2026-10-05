@@ -63,13 +63,13 @@
 ### ✍️ Latest Blog Posts
 
 <a href="https://nipunaranasinghe.medium.com/the-great-illusion-of-enterprise-integration-8900085e7428" target="_blank">
-    <img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/0" alt="Recent Article 0">
+    <img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/0" alt="The Great Illusion of Enterprise Integration">
   </a>
 <a href="https://nipunaranasinghe.medium.com/my-5-year-journey-with-ballerina-embracing-open-source-from-day-one-ec3630a71b7e" target="_blank">
-    <img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/1" alt="Recent Article 1">
+    <img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/1" alt="Five Years with Ballerina: Lessons from Building in Open Source">
   </a>
 <a href="https://medium.com/ballerina-techblog/an-introduction-to-ballerina-semantic-versioning-validator-956d4884b121" target="_blank">
-    <img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/2" alt="Recent Article 2">
+    <img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/2" alt="Introduction to Ballerina Semantic Versioning Validator">
   </a>
 
 ![footer](https://capsule-render.vercel.app/api?type=waving&height=120&color=gradient&section=footer)
