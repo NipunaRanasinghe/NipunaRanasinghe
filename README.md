@@ -8,23 +8,20 @@
 
 ### 👨‍💻 About Me
 
-I build WSO2 Integrator and the Ballerina language at WSO2, an open-source platform for writing integrations as code.
-
-- 💼 **Core Contributor** — [WSO2 Integrator](https://wso2.com/integrator/ballerina-integrator/) & [Ballerina Language](https://ballerina.io/)
-- 🏢 **Technical Lead** — [WSO2](https://wso2.com/)
-- 🔬 **Former Research Officer (Machine Learning)** — [Singapore University of Technology and Design](https://www.sutd.edu.sg/)
-- 🎓 **B.Sc. (Hons) in Engineering – First Class** — [University of Moratuwa](https://uom.lk/)
+Technical Lead at [WSO2](https://wso2.com/) with 8+ years building integration platforms and developer tooling, leading engineering teams on [Ballerina](https://ballerina.io/) and [WSO2 Integrator](https://wso2.com/integrator/ballerina-integrator/). Previously a machine learning researcher at [SUTD](https://www.sutd.edu.sg/), and a member of Sri Lanka's national teams for the International Physics Olympiad and ABU Robocon.
 
 ---
 
-### 🚀 Featured Work
+### 🚀 Featured Projects
 
-- 🐞 **[Ballerina Debugger](https://github.com/ballerina-platform/ballerina-lang/tree/master/misc/debug-adapter)** — Debug Adapter Protocol implementation for Ballerina
-- 🔖 **[Ballerina Semver Checker](https://github.com/ballerina-platform/ballerina-lang/tree/master/misc/semver-checker)** — Validates semantic versioning of Ballerina packages ([blog post](https://medium.com/ballerina-techblog/an-introduction-to-ballerina-semantic-versioning-validator-956d4884b121))
-- 🧩 **[Ballerina IntelliJ Plugin](https://plugins.jetbrains.com/plugin/9520-ballerina)** — Ballerina language support for IntelliJ IDEA
-- 🔌 **[lsp4intellij](https://github.com/ballerina-platform/lsp4intellij)** — Language Server Protocol client library for IntelliJ and other JetBrains IDEs
-- 🧰 **[Ballerina VS Code Extension](https://github.com/ballerina-platform/ballerina-vscode)** — Ballerina and WSO2 Integrator support for VS Code
-- 🤖 **[awesome-ai-agents](https://github.com/NipunaRanasinghe/awesome-ai-agents)** — Curated list of frameworks, tools and resources for building AI agents
+| Project | Role | Stars | Notes |
+|---|---|---|---|
+| 🔌 [lsp4intellij](https://github.com/ballerina-platform/lsp4intellij) | Creator & maintainer | ![Stars](https://img.shields.io/github/stars/ballerina-platform/lsp4intellij?style=flat&label=%E2%98%85) | Language Server Protocol client library for JetBrains IDEs, now community-driven |
+| 🤖 [awesome-ai-agents](https://github.com/NipunaRanasinghe/awesome-ai-agents) | Creator & maintainer | ![Stars](https://img.shields.io/github/stars/NipunaRanasinghe/awesome-ai-agents?style=flat&label=%E2%98%85) | Curated list of frameworks, tools and resources for building AI agents |
+| 🐞 [Ballerina Debugger](https://github.com/ballerina-platform/ballerina-lang/tree/master/misc/debug-adapter) | Creator | — | Debug Adapter Protocol server for Ballerina, part of `ballerina-lang` |
+| 🧰 [Ballerina VS Code Extension](https://github.com/ballerina-platform/ballerina-vscode) | Core contributor | — | Ballerina and WSO2 Integrator support for VS Code |
+| 🔖 [Ballerina Semver Checker](https://github.com/ballerina-platform/ballerina-lang/tree/master/misc/semver-checker) | Creator | — | Blocks semver-incompatible package releases to Ballerina Central ([blog post](https://medium.com/ballerina-techblog/an-introduction-to-ballerina-semantic-versioning-validator-956d4884b121)) |
+| 🧩 [Ballerina IntelliJ Plugin](https://github.com/ballerina-platform/plugin-intellij) | Core contributor | — | Ballerina language support for IntelliJ IDEA (2018–2020) |
 
 ---
 
