@@ -44,14 +44,6 @@
 
 ---
 
-### 🏆 GitHub Trophies
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=NipunaRanasinghe&theme=onedark&no-frame=true&column=7&margin-w=15" alt="GitHub Trophies" />
-</p>
-
----
-
 ### 🧾 Certifications
 
 [![CKAD Badge](https://img.shields.io/badge/-Certified_Kubernetes_Application_Developer-326CE5?style=flat&logo=kubernetes&logoColor=white)](https://www.credly.com/badges/bf9a8b51-043b-4487-ae7e-b608891c32e8/public_url)
@@ -70,13 +62,13 @@
 
 ### ✍️ Latest Blog Posts
 
-- <a href="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/0" target="_blank">
+<a href="https://nipunaranasinghe.medium.com/the-great-illusion-of-enterprise-integration-8900085e7428" target="_blank">
     <img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/0" alt="Recent Article 0">
   </a>
-- <a href="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/1" target="_blank">
+<a href="https://nipunaranasinghe.medium.com/my-5-year-journey-with-ballerina-embracing-open-source-from-day-one-ec3630a71b7e" target="_blank">
     <img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/1" alt="Recent Article 1">
   </a>
-- <a href="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/2" target="_blank">
+<a href="https://medium.com/ballerina-techblog/an-introduction-to-ballerina-semantic-versioning-validator-956d4884b121" target="_blank">
     <img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/2" alt="Recent Article 2">
   </a>
 
