@@ -1,11 +1,11 @@
-![top-wave](https://capsule-render.vercel.app/api?type=waving&height=120&color=0:0D1117,100:46C0BC&section=header)
+![top-wave](https://capsule-render.vercel.app/api?type=waving&height=120&color=0:0D1117,50:46C0BC,100:F0A23B&section=header)
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=24&pause=1000&color=46C0BC&width=650&height=45&center=true&vCenter=true&lines=Technical%20Lead%20%40%20WSO2;8%2B%20years%20in%20integration%20%26%20developer%20tooling;Building%20Ballerina%20%26%20WSO2%20Integrator;Ex-ML%20researcher%20%40%20SUTD" alt="Technical Lead @ WSO2 · 8+ years in integration &amp; developer tooling · Building Ballerina &amp; WSO2 Integrator · Ex-ML researcher @ SUTD" />
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=NipunaRanasinghe&label=Profile%20views&color=46C0BC&style=flat" alt="Profile views" /> <a href="https://gitista.com/search/?country=LK&handle=NipunaRanasinghe"><img src="https://img.shields.io/badge/Gitista-Top%205%20Contributor%20%C2%B7%20Sri%20Lanka-46C0BC?style=flat" alt="Gitista: Top 5 Contributor · Sri Lanka" /></a> <img src="https://img.shields.io/github/followers/NipunaRanasinghe?label=Follow&style=social" alt="GitHub Followers" />
+  <img src="https://komarev.com/ghpvc/?username=NipunaRanasinghe&label=Profile%20views&color=46C0BC&style=flat" alt="Profile views" /> <a href="https://gitista.com/search/?country=LK&handle=NipunaRanasinghe"><img src="https://img.shields.io/badge/Gitista-Top%205%20Contributor%20%C2%B7%20Sri%20Lanka-F0A23B?style=flat" alt="Gitista: Top 5 Contributor · Sri Lanka" /></a> <img src="https://img.shields.io/github/followers/NipunaRanasinghe?label=Follow&style=social" alt="GitHub Followers" />
 </p>
 
 ---
@@ -42,16 +42,16 @@
 
 <p align="center">
   <a href="https://github.com/anuraghazra/github-readme-stats#gh-dark-mode-only">
-    <img alt="Nipuna's GitHub Stats" src="https://denvercoder1-github-readme-stats.vercel.app/api/?username=NipunaRanasinghe&show_icons=true&include_all_commits=true&count_private=true&theme=react&hide_border=true&bg_color=0D1117&title_color=46C0BC&icon_color=46C0BC" height="170" />
+    <img alt="Nipuna's GitHub Stats" src="https://denvercoder1-github-readme-stats.vercel.app/api/?username=NipunaRanasinghe&show_icons=true&include_all_commits=true&count_private=true&theme=react&hide_border=true&bg_color=0D1117&title_color=46C0BC&icon_color=F0A23B" height="170" />
   </a><a href="https://github.com/anuraghazra/github-readme-stats#gh-light-mode-only">
-    <img alt="Nipuna's GitHub Stats" src="https://denvercoder1-github-readme-stats.vercel.app/api/?username=NipunaRanasinghe&show_icons=true&include_all_commits=true&count_private=true&theme=react&hide_border=true&bg_color=FFFFFF&title_color=0F766E&icon_color=0F766E&text_color=1F2328&ring_color=0F766E" height="170" />
+    <img alt="Nipuna's GitHub Stats" src="https://denvercoder1-github-readme-stats.vercel.app/api/?username=NipunaRanasinghe&show_icons=true&include_all_commits=true&count_private=true&theme=react&hide_border=true&bg_color=FFFFFF&title_color=0F766E&icon_color=B45309&text_color=1F2328&ring_color=0F766E" height="170" />
   </a>
-  <a href="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=NipunaRanasinghe&layout=compact&theme=react&hide_border=true&bg_color=0D1117&title_color=46C0BC&icon_color=46C0BC&langs_count=8#gh-dark-mode-only"><img alt="Top Languages" src="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=NipunaRanasinghe&layout=compact&theme=react&hide_border=true&bg_color=0D1117&title_color=46C0BC&icon_color=46C0BC&langs_count=8" height="170" /></a>
-<a href="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=NipunaRanasinghe&layout=compact&theme=react&hide_border=true&bg_color=FFFFFF&title_color=0F766E&icon_color=0F766E&langs_count=8&text_color=1F2328&ring_color=0F766E#gh-light-mode-only"><img alt="Top Languages" src="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=NipunaRanasinghe&layout=compact&theme=react&hide_border=true&bg_color=FFFFFF&title_color=0F766E&icon_color=0F766E&langs_count=8&text_color=1F2328&ring_color=0F766E" height="170" /></a>
+  <a href="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=NipunaRanasinghe&layout=compact&theme=react&hide_border=true&bg_color=0D1117&title_color=46C0BC&icon_color=F0A23B&langs_count=8#gh-dark-mode-only"><img alt="Top Languages" src="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=NipunaRanasinghe&layout=compact&theme=react&hide_border=true&bg_color=0D1117&title_color=46C0BC&icon_color=F0A23B&langs_count=8" height="170" /></a>
+<a href="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=NipunaRanasinghe&layout=compact&theme=react&hide_border=true&bg_color=FFFFFF&title_color=0F766E&icon_color=B45309&langs_count=8&text_color=1F2328&ring_color=0F766E#gh-light-mode-only"><img alt="Top Languages" src="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=NipunaRanasinghe&layout=compact&theme=react&hide_border=true&bg_color=FFFFFF&title_color=0F766E&icon_color=B45309&langs_count=8&text_color=1F2328&ring_color=0F766E" height="170" /></a>
 </p>
 <p align="center">
-  <a href="https://streak-stats.demolab.com/?user=NipunaRanasinghe&theme=react&hide_border=true&background=0D1117&stroke=46C0BC&ring=46C0BC&fire=46C0BC&currStreakLabel=46C0BC#gh-dark-mode-only"><img alt="GitHub Streak" src="https://streak-stats.demolab.com/?user=NipunaRanasinghe&theme=react&hide_border=true&background=0D1117&stroke=46C0BC&ring=46C0BC&fire=46C0BC&currStreakLabel=46C0BC" height="170" /></a>
-<a href="https://streak-stats.demolab.com/?user=NipunaRanasinghe&theme=react&hide_border=true&background=FFFFFF&stroke=D0D7DE&ring=0F766E&fire=0F766E&currStreakLabel=0F766E&currStreakNum=1F2328&sideNums=1F2328&sideLabels=0F766E&dates=59636E#gh-light-mode-only"><img alt="GitHub Streak" src="https://streak-stats.demolab.com/?user=NipunaRanasinghe&theme=react&hide_border=true&background=FFFFFF&stroke=D0D7DE&ring=0F766E&fire=0F766E&currStreakLabel=0F766E&currStreakNum=1F2328&sideNums=1F2328&sideLabels=0F766E&dates=59636E" height="170" /></a>
+  <a href="https://streak-stats.demolab.com/?user=NipunaRanasinghe&theme=react&hide_border=true&background=0D1117&stroke=46C0BC&ring=46C0BC&fire=F0A23B&currStreakLabel=46C0BC#gh-dark-mode-only"><img alt="GitHub Streak" src="https://streak-stats.demolab.com/?user=NipunaRanasinghe&theme=react&hide_border=true&background=0D1117&stroke=46C0BC&ring=46C0BC&fire=F0A23B&currStreakLabel=46C0BC" height="170" /></a>
+<a href="https://streak-stats.demolab.com/?user=NipunaRanasinghe&theme=react&hide_border=true&background=FFFFFF&stroke=D0D7DE&ring=0F766E&fire=B45309&currStreakLabel=0F766E&currStreakNum=1F2328&sideNums=1F2328&sideLabels=0F766E&dates=59636E#gh-light-mode-only"><img alt="GitHub Streak" src="https://streak-stats.demolab.com/?user=NipunaRanasinghe&theme=react&hide_border=true&background=FFFFFF&stroke=D0D7DE&ring=0F766E&fire=B45309&currStreakLabel=0F766E&currStreakNum=1F2328&sideNums=1F2328&sideLabels=0F766E&dates=59636E" height="170" /></a>
 </p>
 
 ---
@@ -84,4 +84,4 @@
     <img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/2" alt="Introduction to Ballerina Semantic Versioning Validator">
   </a>
 
-![footer](https://capsule-render.vercel.app/api?type=waving&height=120&color=0:0D1117,100:46C0BC&section=footer)
+![footer](https://capsule-render.vercel.app/api?type=waving&height=120&color=0:0D1117,50:46C0BC,100:F0A23B&section=footer)
