@@ -13,14 +13,14 @@
 ### 🚀 Featured Projects
 
 <p align="center">
-<a href="https://github.com/ballerina-platform/lsp4intellij"><picture><source media="(prefers-color-scheme: dark)" srcset="./images/projects/lsp4intellij.svg"><img src="./images/projects/lsp4intellij-light.svg" width="380" alt="lsp4intellij: LSP client for JetBrains IDEs (Creator &amp; maintainer)" /></picture></a>
-<a href="https://github.com/NipunaRanasinghe/awesome-ai-agents"><picture><source media="(prefers-color-scheme: dark)" srcset="./images/projects/awesome-ai-agents.svg"><img src="./images/projects/awesome-ai-agents-light.svg" width="380" alt="awesome-ai-agents: Curated AI agent resources (Creator &amp; maintainer)" /></picture></a>
+<a href="https://github.com/ballerina-platform/lsp4intellij#gh-dark-mode-only"><img src="./images/projects/lsp4intellij.svg" width="380" alt="lsp4intellij: LSP client for JetBrains IDEs (Creator &amp; maintainer)" /></a><a href="https://github.com/ballerina-platform/lsp4intellij#gh-light-mode-only"><img src="./images/projects/lsp4intellij-light.svg" width="380" alt="lsp4intellij: LSP client for JetBrains IDEs (Creator &amp; maintainer)" /></a>
+<a href="https://github.com/NipunaRanasinghe/awesome-ai-agents#gh-dark-mode-only"><img src="./images/projects/awesome-ai-agents.svg" width="380" alt="awesome-ai-agents: Curated AI agent resources (Creator &amp; maintainer)" /></a><a href="https://github.com/NipunaRanasinghe/awesome-ai-agents#gh-light-mode-only"><img src="./images/projects/awesome-ai-agents-light.svg" width="380" alt="awesome-ai-agents: Curated AI agent resources (Creator &amp; maintainer)" /></a>
 <br>
-<a href="https://github.com/ballerina-platform/ballerina-lang/tree/master/misc/debug-adapter"><picture><source media="(prefers-color-scheme: dark)" srcset="./images/projects/ballerina-debugger.svg"><img src="./images/projects/ballerina-debugger-light.svg" width="380" alt="Ballerina Debugger: Debug adapter for Ballerina (Creator)" /></picture></a>
-<a href="https://github.com/ballerina-platform/ballerina-vscode"><picture><source media="(prefers-color-scheme: dark)" srcset="./images/projects/ballerina-vs-code-extension.svg"><img src="./images/projects/ballerina-vs-code-extension-light.svg" width="380" alt="Ballerina VS Code Extension: VS Code tooling for Ballerina (Core contributor)" /></picture></a>
+<a href="https://github.com/ballerina-platform/ballerina-lang/tree/master/misc/debug-adapter#gh-dark-mode-only"><img src="./images/projects/ballerina-debugger.svg" width="380" alt="Ballerina Debugger: Debug adapter for Ballerina (Creator)" /></a><a href="https://github.com/ballerina-platform/ballerina-lang/tree/master/misc/debug-adapter#gh-light-mode-only"><img src="./images/projects/ballerina-debugger-light.svg" width="380" alt="Ballerina Debugger: Debug adapter for Ballerina (Creator)" /></a>
+<a href="https://github.com/ballerina-platform/ballerina-vscode#gh-dark-mode-only"><img src="./images/projects/ballerina-vs-code-extension.svg" width="380" alt="Ballerina VS Code Extension: VS Code tooling for Ballerina (Core contributor)" /></a><a href="https://github.com/ballerina-platform/ballerina-vscode#gh-light-mode-only"><img src="./images/projects/ballerina-vs-code-extension-light.svg" width="380" alt="Ballerina VS Code Extension: VS Code tooling for Ballerina (Core contributor)" /></a>
 <br>
-<a href="https://github.com/ballerina-platform/ballerina-lang/tree/master/misc/semver-checker"><picture><source media="(prefers-color-scheme: dark)" srcset="./images/projects/ballerina-semver-checker.svg"><img src="./images/projects/ballerina-semver-checker-light.svg" width="380" alt="Ballerina Semver Checker: Semver checks for Ballerina (Creator)" /></picture></a>
-<a href="https://github.com/ballerina-platform/plugin-intellij"><picture><source media="(prefers-color-scheme: dark)" srcset="./images/projects/ballerina-intellij-plugin.svg"><img src="./images/projects/ballerina-intellij-plugin-light.svg" width="380" alt="Ballerina IntelliJ Plugin: Ballerina for IntelliJ IDEA (Core contributor)" /></picture></a>
+<a href="https://github.com/ballerina-platform/ballerina-lang/tree/master/misc/semver-checker#gh-dark-mode-only"><img src="./images/projects/ballerina-semver-checker.svg" width="380" alt="Ballerina Semver Checker: Semver checks for Ballerina (Creator)" /></a><a href="https://github.com/ballerina-platform/ballerina-lang/tree/master/misc/semver-checker#gh-light-mode-only"><img src="./images/projects/ballerina-semver-checker-light.svg" width="380" alt="Ballerina Semver Checker: Semver checks for Ballerina (Creator)" /></a>
+<a href="https://github.com/ballerina-platform/plugin-intellij#gh-dark-mode-only"><img src="./images/projects/ballerina-intellij-plugin.svg" width="380" alt="Ballerina IntelliJ Plugin: Ballerina for IntelliJ IDEA (Core contributor)" /></a><a href="https://github.com/ballerina-platform/plugin-intellij#gh-light-mode-only"><img src="./images/projects/ballerina-intellij-plugin-light.svg" width="380" alt="Ballerina IntelliJ Plugin: Ballerina for IntelliJ IDEA (Core contributor)" /></a>
 </p>
 
 ---
@@ -28,10 +28,12 @@
 ### 🛠️ Tech Stack
 
 <p align="left">
-  <a href="https://ballerina.io/">
-    <picture><source media="(prefers-color-scheme: dark)" srcset="./images/ballerina.svg" /><img src="./images/ballerina-light.svg" alt="Ballerina" height="48" /></picture>
+  <a href="https://ballerina.io/#gh-dark-mode-only">
+    <img src="./images/ballerina.svg" alt="Ballerina" height="48" />
+  </a><a href="https://ballerina.io/#gh-light-mode-only">
+    <img src="./images/ballerina-light.svg" alt="Ballerina" height="48" />
   </a>
-  <picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=java,go,python,kotlin,ts,kubernetes,docker,gradle,aws" /><img src="https://skillicons.dev/icons?i=java,go,python,kotlin,ts,kubernetes,docker,gradle,aws&theme=light" alt="Tech stack" /></picture>
+  <a href="https://skillicons.dev/icons?i=java,go,python,kotlin,ts,kubernetes,docker,gradle,aws#gh-dark-mode-only"><img src="https://skillicons.dev/icons?i=java,go,python,kotlin,ts,kubernetes,docker,gradle,aws" alt="Tech stack" /></a><a href="https://skillicons.dev/icons?i=java,go,python,kotlin,ts,kubernetes,docker,gradle,aws&theme=light#gh-light-mode-only"><img src="https://skillicons.dev/icons?i=java,go,python,kotlin,ts,kubernetes,docker,gradle,aws&theme=light" alt="Tech stack" /></a>
 </p>
 
 ---
@@ -39,22 +41,17 @@
 ### 📊 GitHub Analytics
 
 <p align="center">
-  <a href="https://github.com/anuraghazra/github-readme-stats">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://denvercoder1-github-readme-stats.vercel.app/api/?username=NipunaRanasinghe&show_icons=true&include_all_commits=true&count_private=true&theme=react&hide_border=true&bg_color=0D1117&title_color=46C0BC&icon_color=46C0BC" />
-      <img alt="Nipuna's GitHub Stats" src="https://denvercoder1-github-readme-stats.vercel.app/api/?username=NipunaRanasinghe&show_icons=true&include_all_commits=true&count_private=true&theme=react&hide_border=true&bg_color=FFFFFF&title_color=0F766E&icon_color=0F766E&text_color=1F2328&ring_color=0F766E" height="170" />
-    </picture>
+  <a href="https://github.com/anuraghazra/github-readme-stats#gh-dark-mode-only">
+    <img alt="Nipuna's GitHub Stats" src="https://denvercoder1-github-readme-stats.vercel.app/api/?username=NipunaRanasinghe&show_icons=true&include_all_commits=true&count_private=true&theme=react&hide_border=true&bg_color=0D1117&title_color=46C0BC&icon_color=46C0BC" height="170" />
+  </a><a href="https://github.com/anuraghazra/github-readme-stats#gh-light-mode-only">
+    <img alt="Nipuna's GitHub Stats" src="https://denvercoder1-github-readme-stats.vercel.app/api/?username=NipunaRanasinghe&show_icons=true&include_all_commits=true&count_private=true&theme=react&hide_border=true&bg_color=FFFFFF&title_color=0F766E&icon_color=0F766E&text_color=1F2328&ring_color=0F766E" height="170" />
   </a>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=NipunaRanasinghe&layout=compact&theme=react&hide_border=true&bg_color=0D1117&title_color=46C0BC&icon_color=46C0BC&langs_count=8" />
-    <img alt="Top Languages" src="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=NipunaRanasinghe&layout=compact&theme=react&hide_border=true&bg_color=FFFFFF&title_color=0F766E&icon_color=0F766E&langs_count=8&text_color=1F2328&ring_color=0F766E" height="170" />
-  </picture>
+  <a href="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=NipunaRanasinghe&layout=compact&theme=react&hide_border=true&bg_color=0D1117&title_color=46C0BC&icon_color=46C0BC&langs_count=8#gh-dark-mode-only"><img alt="Top Languages" src="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=NipunaRanasinghe&layout=compact&theme=react&hide_border=true&bg_color=0D1117&title_color=46C0BC&icon_color=46C0BC&langs_count=8" height="170" /></a>
+<a href="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=NipunaRanasinghe&layout=compact&theme=react&hide_border=true&bg_color=FFFFFF&title_color=0F766E&icon_color=0F766E&langs_count=8&text_color=1F2328&ring_color=0F766E#gh-light-mode-only"><img alt="Top Languages" src="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=NipunaRanasinghe&layout=compact&theme=react&hide_border=true&bg_color=FFFFFF&title_color=0F766E&icon_color=0F766E&langs_count=8&text_color=1F2328&ring_color=0F766E" height="170" /></a>
 </p>
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=NipunaRanasinghe&theme=react&hide_border=true&background=0D1117&stroke=46C0BC&ring=46C0BC&fire=46C0BC&currStreakLabel=46C0BC" />
-    <img alt="GitHub Streak" src="https://streak-stats.demolab.com/?user=NipunaRanasinghe&theme=react&hide_border=true&background=FFFFFF&stroke=D0D7DE&ring=0F766E&fire=0F766E&currStreakLabel=0F766E&currStreakNum=1F2328&sideNums=1F2328&sideLabels=0F766E&dates=59636E" height="170" />
-  </picture>
+  <a href="https://streak-stats.demolab.com/?user=NipunaRanasinghe&theme=react&hide_border=true&background=0D1117&stroke=46C0BC&ring=46C0BC&fire=46C0BC&currStreakLabel=46C0BC#gh-dark-mode-only"><img alt="GitHub Streak" src="https://streak-stats.demolab.com/?user=NipunaRanasinghe&theme=react&hide_border=true&background=0D1117&stroke=46C0BC&ring=46C0BC&fire=46C0BC&currStreakLabel=46C0BC" height="170" /></a>
+<a href="https://streak-stats.demolab.com/?user=NipunaRanasinghe&theme=react&hide_border=true&background=FFFFFF&stroke=D0D7DE&ring=0F766E&fire=0F766E&currStreakLabel=0F766E&currStreakNum=1F2328&sideNums=1F2328&sideLabels=0F766E&dates=59636E#gh-light-mode-only"><img alt="GitHub Streak" src="https://streak-stats.demolab.com/?user=NipunaRanasinghe&theme=react&hide_border=true&background=FFFFFF&stroke=D0D7DE&ring=0F766E&fire=0F766E&currStreakLabel=0F766E&currStreakNum=1F2328&sideNums=1F2328&sideLabels=0F766E&dates=59636E" height="170" /></a>
 </p>
 
 ---
