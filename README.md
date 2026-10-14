@@ -1,16 +1,12 @@
-![top-wave](https://capsule-render.vercel.app/api?type=waving&height=120&color=gradient&section=header)
+![top-wave](https://capsule-render.vercel.app/api?type=waving&height=120&color=0:0D1117,100:58A6FF&section=header)
 
-![header](https://capsule-render.vercel.app/api?type=venom&height=300&color=gradient&text=Nipuna%20Ranasinghe&section=header&fontColor=404040&animation=twinkling&fontSize=50&desc=Engineer%20%E2%80%A2%20OSS%20Contributor%20%E2%80%A2%20Mentor&descSize=20)
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=24&pause=1000&color=58A6FF&width=650&height=45&center=true&vCenter=true&lines=Technical%20Lead%20%40%20WSO2;8%2B%20years%20in%20integration%20%26%20developer%20tooling;Building%20Ballerina%20%26%20WSO2%20Integrator;Ex-ML%20researcher%20%40%20SUTD" alt="Technical Lead @ WSO2 · 8+ years in integration &amp; developer tooling · Building Ballerina &amp; WSO2 Integrator · Ex-ML researcher @ SUTD" />
+</p>
 
-<img src="https://komarev.com/ghpvc/?username=NipunaRanasinghe&label=Profile%20views&color=brightgreen&style=flat" alt="Profile views" /> <img src="https://user-badge.committers.top/sri_lanka_public/NipunaRanasinghe.svg" alt="Top Committer in Sri Lanka" /> <img src="https://img.shields.io/github/followers/NipunaRanasinghe?label=Follow&style=social" alt="GitHub Followers" />
-
----
-
-### 👨‍💻 About Me
-
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=22&pause=1000&color=F85D7F&width=600&height=40&lines=Technical%20Lead%20%40%20WSO2;8%2B%20years%20in%20integration%20%26%20developer%20tooling;Building%20Ballerina%20%26%20WSO2%20Integrator;Ex-ML%20researcher%20%40%20SUTD" alt="Technical Lead @ WSO2 · 8+ years in integration &amp; developer tooling · Building Ballerina &amp; WSO2 Integrator · Ex-ML researcher @ SUTD" />
-
-Technical Lead at [WSO2](https://wso2.com/) with 8+ years building integration platforms and developer tooling. Previously a machine learning researcher at [SUTD](https://www.sutd.edu.sg/).
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=NipunaRanasinghe&label=Profile%20views&color=58A6FF&style=flat" alt="Profile views" /> <a href="https://gitista.com/search/?country=LK&handle=NipunaRanasinghe"><img src="https://img.shields.io/badge/Gitista-Top%205%20Contributor%20%C2%B7%20Sri%20Lanka-58A6FF?style=flat" alt="Gitista: Top 5 Contributor · Sri Lanka" /></a> <img src="https://img.shields.io/github/followers/NipunaRanasinghe?label=Follow&style=social" alt="GitHub Followers" />
+</p>
 
 ---
 
@@ -41,16 +37,16 @@ Technical Lead at [WSO2](https://wso2.com/) with 8+ years building integration p
 <p align="center">
   <a href="https://github.com/anuraghazra/github-readme-stats">
     <img alt="Nipuna's GitHub Stats"
-         src="https://denvercoder1-github-readme-stats.vercel.app/api/?username=NipunaRanasinghe&show_icons=true&include_all_commits=true&count_private=true&theme=react&hide_border=true&bg_color=1F222E&title_color=F85D7F&icon_color=F8D866"
+         src="https://denvercoder1-github-readme-stats.vercel.app/api/?username=NipunaRanasinghe&show_icons=true&include_all_commits=true&count_private=true&theme=react&hide_border=true&bg_color=0D1117&title_color=58A6FF&icon_color=58A6FF"
          height="170" />
   </a>
   <img alt="Top Languages"
-       src="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=NipunaRanasinghe&layout=compact&theme=react&hide_border=true&bg_color=1F222E&title_color=F85D7F&icon_color=F8D866&langs_count=8"
+       src="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=NipunaRanasinghe&layout=compact&theme=react&hide_border=true&bg_color=0D1117&title_color=58A6FF&icon_color=58A6FF&langs_count=8"
        height="170" />
 </p>
 <p align="center">
   <img alt="GitHub Streak"
-       src="https://streak-stats.demolab.com/?user=NipunaRanasinghe&theme=react&hide_border=true&background=1F222E&stroke=F85D7F&ring=F85D7F&fire=F8D866&currStreakLabel=F85D7F"
+       src="https://streak-stats.demolab.com/?user=NipunaRanasinghe&theme=react&hide_border=true&background=0D1117&stroke=58A6FF&ring=58A6FF&fire=58A6FF&currStreakLabel=58A6FF"
        height="170" />
 </p>
 
@@ -84,4 +80,4 @@ Technical Lead at [WSO2](https://wso2.com/) with 8+ years building integration p
     <img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/2" alt="Introduction to Ballerina Semantic Versioning Validator">
   </a>
 
-![footer](https://capsule-render.vercel.app/api?type=waving&height=120&color=gradient&section=footer)
+![footer](https://capsule-render.vercel.app/api?type=waving&height=120&color=0:0D1117,100:58A6FF&section=footer)
