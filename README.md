@@ -28,12 +28,10 @@
 ### 🛠️ Tech Stack
 
 <p align="left">
-  <a href="https://ballerina.io/#gh-dark-mode-only">
+  <a href="https://ballerina.io/">
     <img src="./images/ballerina.svg" alt="Ballerina" height="48" />
-  </a><a href="https://ballerina.io/#gh-light-mode-only">
-    <img src="./images/ballerina-light.svg" alt="Ballerina" height="48" />
   </a>
-  <a href="https://skillicons.dev/icons?i=java,go,python,kotlin,ts,kubernetes,docker,gradle,aws#gh-dark-mode-only"><img src="https://skillicons.dev/icons?i=java,go,python,kotlin,ts,kubernetes,docker,gradle,aws" alt="Tech stack" /></a><a href="https://skillicons.dev/icons?i=java,go,python,kotlin,ts,kubernetes,docker,gradle,aws&theme=light#gh-light-mode-only"><img src="https://skillicons.dev/icons?i=java,go,python,kotlin,ts,kubernetes,docker,gradle,aws&theme=light" alt="Tech stack" /></a>
+  <a href="https://skillicons.dev/icons?i=java,go,python,kotlin,ts,kubernetes,docker,gradle,aws"><img src="https://skillicons.dev/icons?i=java,go,python,kotlin,ts,kubernetes,docker,gradle,aws" alt="Tech stack" /></a>
 </p>
 
 ---
@@ -64,11 +62,11 @@
 
 ### 🌐 Connect with Me
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nipunaranasinghe/)
-[![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@nipunaranasinghe)
-[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/indrachapa93)
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/i_n_d_r_a_c_h_a_p_a/)
-[![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/nipuna3/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-161B22?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAyNCAyNCc%2BPHJlY3Qgd2lkdGg9JzI0JyBoZWlnaHQ9JzI0JyByeD0nNCcgZmlsbD0nIzBBNjZDMicvPjxwYXRoIGZpbGw9JyNmZmYnIGQ9J002Ljk0IDguNUg0LjNWMTloMi42NFY4LjV6TTUuNjIgNC41YTEuNTMgMS41MyAwIDEgMCAwIDMuMDYgMS41MyAxLjUzIDAgMCAwIDAtMy4wNnpNMTkuNyAxMy4wNmMwLTIuODItMS41LTQuNzUtNC4yLTQuNzVhMy42MiAzLjYyIDAgMCAwLTMuMjYgMS43OVY4LjVIOS43VjE5aDIuNjR2LTUuMmMwLTEuMzcuMjYtMi43IDEuOTYtMi43IDEuNjcgMCAxLjcgMS41NyAxLjcgMi43OVYxOWgyLjY0di01Ljk0eicvPjwvc3ZnPg%3D%3D)](https://www.linkedin.com/in/nipunaranasinghe/)
+[![Medium](https://img.shields.io/badge/Medium-161B22?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@nipunaranasinghe)
+[![X](https://img.shields.io/badge/X-161B22?style=for-the-badge&logo=x&logoColor=white)](https://x.com/indrachapa93)
+[![Instagram](https://img.shields.io/badge/Instagram-161B22?style=for-the-badge&logo=instagram&logoColor=E4405F)](https://www.instagram.com/i_n_d_r_a_c_h_a_p_a/)
+[![Facebook](https://img.shields.io/badge/Facebook-161B22?style=for-the-badge&logo=facebook&logoColor=0866FF)](https://www.facebook.com/nipuna3/)
 
 ---
 
