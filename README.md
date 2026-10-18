@@ -77,10 +77,9 @@
 
 ### ✍️ Latest Blog Posts
 
-<!-- BLOG-POST-LIST:START -->
-<a href="https://nipunaranasinghe.medium.com/the-great-illusion-of-enterprise-integration-8900085e7428" target="_blank"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/0" alt="The Great Illusion of Enterprise Integration"></a>
-<a href="https://nipunaranasinghe.medium.com/my-5-year-journey-with-ballerina-embracing-open-source-from-day-one-ec3630a71b7e" target="_blank"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/1" alt="Five Years with Ballerina: Lessons from Building in Open Source"></a>
-<a href="https://medium.com/ballerina-techblog/an-introduction-to-ballerina-semantic-versioning-validator-956d4884b121" target="_blank"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/2" alt="Introduction to Ballerina Semantic Versioning Validator"></a>
+<!-- BLOG-POST-LIST:START --><a href="https://nipunaranasinghe.medium.com/the-great-illusion-of-enterprise-integration-8900085e7428?source=rss-f8d038b7ff48------2" target="_blank"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/0" alt="The Great Illusion of Enterprise Integration"></a>
+<a href="https://nipunaranasinghe.medium.com/my-5-year-journey-with-ballerina-embracing-open-source-from-day-one-ec3630a71b7e?source=rss-f8d038b7ff48------2" target="_blank"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/1" alt="Five Years with Ballerina: Lessons from Building in Open Source"></a>
+<a href="https://medium.com/ballerina-techblog/an-introduction-to-ballerina-semantic-versioning-validator-956d4884b121?source=rss-f8d038b7ff48------2" target="_blank"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/2" alt="Introduction to Ballerina Semantic Versioning Validator"></a>
 <!-- BLOG-POST-LIST:END -->
 
 ![footer](https://capsule-render.vercel.app/api?type=waving&height=120&color=0:0D1117,50:46C0BC,100:F0A23B&section=footer)
