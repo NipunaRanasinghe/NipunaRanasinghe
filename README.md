@@ -52,11 +52,6 @@
 <a href="https://streak-stats.demolab.com/?user=NipunaRanasinghe&theme=react&hide_border=true&background=FFFFFF&stroke=D0D7DE&ring=0F766E&fire=B45309&currStreakLabel=0F766E&currStreakNum=1F2328&sideNums=1F2328&sideLabels=0F766E&dates=59636E#gh-light-mode-only"><img alt="GitHub Streak" src="https://streak-stats.demolab.com/?user=NipunaRanasinghe&theme=react&hide_border=true&background=FFFFFF&stroke=D0D7DE&ring=0F766E&fire=B45309&currStreakLabel=0F766E&currStreakNum=1F2328&sideNums=1F2328&sideLabels=0F766E&dates=59636E" height="170" /></a>
 </p>
 
-<p align="center">
-  <a href="https://github.com/NipunaRanasinghe#gh-dark-mode-only"><img src="https://raw.githubusercontent.com/NipunaRanasinghe/NipunaRanasinghe/refs/heads/output/github-snake-dark.svg" alt="Contribution snake" /></a>
-  <a href="https://github.com/NipunaRanasinghe#gh-light-mode-only"><img src="https://raw.githubusercontent.com/NipunaRanasinghe/NipunaRanasinghe/refs/heads/output/github-snake.svg" alt="Contribution snake" /></a>
-</p>
-
 ---
 
 ### 🧾 Certifications
