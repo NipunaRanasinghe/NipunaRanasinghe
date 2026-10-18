@@ -53,8 +53,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/NipunaRanasinghe#gh-dark-mode-only"><img src="https://raw.githubusercontent.com/NipunaRanasinghe/NipunaRanasinghe/output/github-snake-dark.svg" alt="Contribution snake" /></a>
-  <a href="https://github.com/NipunaRanasinghe#gh-light-mode-only"><img src="https://raw.githubusercontent.com/NipunaRanasinghe/NipunaRanasinghe/output/github-snake.svg" alt="Contribution snake" /></a>
+  <a href="https://github.com/NipunaRanasinghe#gh-dark-mode-only"><img src="https://raw.githubusercontent.com/NipunaRanasinghe/NipunaRanasinghe/refs/heads/output/github-snake-dark.svg" alt="Contribution snake" /></a>
+  <a href="https://github.com/NipunaRanasinghe#gh-light-mode-only"><img src="https://raw.githubusercontent.com/NipunaRanasinghe/NipunaRanasinghe/refs/heads/output/github-snake.svg" alt="Contribution snake" /></a>
 </p>
 
 ---
