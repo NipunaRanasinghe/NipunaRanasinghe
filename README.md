@@ -52,6 +52,11 @@
 <a href="https://streak-stats.demolab.com/?user=NipunaRanasinghe&theme=react&hide_border=true&background=FFFFFF&stroke=D0D7DE&ring=0F766E&fire=B45309&currStreakLabel=0F766E&currStreakNum=1F2328&sideNums=1F2328&sideLabels=0F766E&dates=59636E#gh-light-mode-only"><img alt="GitHub Streak" src="https://streak-stats.demolab.com/?user=NipunaRanasinghe&theme=react&hide_border=true&background=FFFFFF&stroke=D0D7DE&ring=0F766E&fire=B45309&currStreakLabel=0F766E&currStreakNum=1F2328&sideNums=1F2328&sideLabels=0F766E&dates=59636E" height="170" /></a>
 </p>
 
+<p align="center">
+  <a href="https://github.com/NipunaRanasinghe#gh-dark-mode-only"><img src="https://raw.githubusercontent.com/NipunaRanasinghe/NipunaRanasinghe/output/github-snake-dark.svg" alt="Contribution snake" /></a>
+  <a href="https://github.com/NipunaRanasinghe#gh-light-mode-only"><img src="https://raw.githubusercontent.com/NipunaRanasinghe/NipunaRanasinghe/output/github-snake.svg" alt="Contribution snake" /></a>
+</p>
+
 ---
 
 ### 🧾 Certifications
@@ -72,14 +77,10 @@
 
 ### ✍️ Latest Blog Posts
 
-<a href="https://nipunaranasinghe.medium.com/the-great-illusion-of-enterprise-integration-8900085e7428" target="_blank">
-    <img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/0" alt="The Great Illusion of Enterprise Integration">
-  </a>
-<a href="https://nipunaranasinghe.medium.com/my-5-year-journey-with-ballerina-embracing-open-source-from-day-one-ec3630a71b7e" target="_blank">
-    <img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/1" alt="Five Years with Ballerina: Lessons from Building in Open Source">
-  </a>
-<a href="https://medium.com/ballerina-techblog/an-introduction-to-ballerina-semantic-versioning-validator-956d4884b121" target="_blank">
-    <img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/2" alt="Introduction to Ballerina Semantic Versioning Validator">
-  </a>
+<!-- BLOG-POST-LIST:START -->
+<a href="https://nipunaranasinghe.medium.com/the-great-illusion-of-enterprise-integration-8900085e7428" target="_blank"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/0" alt="The Great Illusion of Enterprise Integration"></a>
+<a href="https://nipunaranasinghe.medium.com/my-5-year-journey-with-ballerina-embracing-open-source-from-day-one-ec3630a71b7e" target="_blank"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/1" alt="Five Years with Ballerina: Lessons from Building in Open Source"></a>
+<a href="https://medium.com/ballerina-techblog/an-introduction-to-ballerina-semantic-versioning-validator-956d4884b121" target="_blank"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/2" alt="Introduction to Ballerina Semantic Versioning Validator"></a>
+<!-- BLOG-POST-LIST:END -->
 
 ![footer](https://capsule-render.vercel.app/api?type=waving&height=120&color=0:0D1117,50:46C0BC,100:F0A23B&section=footer)

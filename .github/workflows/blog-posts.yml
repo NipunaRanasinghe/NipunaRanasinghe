@@ -1,0 +1,20 @@
+name: Latest blog posts
+on:
+  schedule:
+    - cron: '0 0 * * *' # Every day at midnight UTC; commits only when the post list changes
+  workflow_dispatch:
+
+jobs:
+  update-blog-posts:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: gautamkrishnar/blog-post-workflow@v1
+        with:
+          feed_list: https://medium.com/feed/@nipunaranasinghe
+          max_post_count: 3
+          # $emojiKey(0,1,2) yields 0, 1, 2 in order: the card service's index for the newest, 2nd and 3rd post
+          template: '<a href="$url" target="_blank"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/$emojiKey(0,1,2)" alt="$title"></a>$newline'
+          commit_message: Update latest blog posts
