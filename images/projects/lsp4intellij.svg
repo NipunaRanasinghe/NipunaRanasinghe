@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="170" viewBox="0 0 400 170" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">
-  <rect x="0.5" y="0.5" width="399" height="169" rx="10" fill="#0D1117" stroke="#30363D"/>
-  <text x="24" y="54" font-size="26">🔌</text>
-  <text x="64" y="50" font-size="19" font-weight="600" fill="#46C0BC">lsp4intellij</text>
-  <text x="24" y="94" font-size="15" fill="#C9D1D9">LSP client for JetBrains IDEs</text>
-  <line x1="24" y1="118" x2="376" y2="118" stroke="#21262D"/>
-  <text x="24" y="146" font-size="13" font-style="italic" fill="#8B949E">Creator &amp; maintainer</text>
-  <text x="376" y="146" text-anchor="end" font-size="14" font-weight="600" fill="#F0A23B">★ 479</text>
-</svg>

@@ -1,7 +1,5 @@
-![top-wave](https://capsule-render.vercel.app/api?type=waving&height=120&color=0:0D1117,50:46C0BC,100:F0A23B&section=header)
-
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=24&pause=1000&color=46C0BC&width=650&height=45&center=true&vCenter=true&lines=Technical%20Lead%20%40%20WSO2;8%2B%20years%20in%20integration%20%26%20developer%20tooling;Building%20Ballerina%20%26%20WSO2%20Integrator;Ex-ML%20researcher%20%40%20SUTD" alt="Technical Lead @ WSO2 · 8+ years in integration &amp; developer tooling · Building Ballerina &amp; WSO2 Integrator · Ex-ML researcher @ SUTD" />
+  <img src="./assets/header/header.webp" width="880" alt="Terminal animation: ssh and whoami, an identity card for Nipuna Ranasinghe (Technical Lead at WSO2, 8+ years in integration and developer tooling, ex-ML researcher at SUTD), then ls ~/projects lighting up lsp4intellij, awesome-ai-agents, the Ballerina debugger, VS Code extension, semver checker and IntelliJ plugin" />
 </p>
 
 <p align="center">
@@ -12,16 +10,14 @@
 
 ### 🚀 Featured Projects
 
-<p align="center">
-<a href="https://github.com/ballerina-platform/lsp4intellij#gh-dark-mode-only"><img src="./images/projects/lsp4intellij.svg" width="380" alt="lsp4intellij: LSP client for JetBrains IDEs (Creator &amp; maintainer)" /></a><a href="https://github.com/ballerina-platform/lsp4intellij#gh-light-mode-only"><img src="./images/projects/lsp4intellij-light.svg" width="380" alt="lsp4intellij: LSP client for JetBrains IDEs (Creator &amp; maintainer)" /></a>
-<a href="https://github.com/NipunaRanasinghe/awesome-ai-agents#gh-dark-mode-only"><img src="./images/projects/awesome-ai-agents.svg" width="380" alt="awesome-ai-agents: Curated AI agent resources (Creator &amp; maintainer)" /></a><a href="https://github.com/NipunaRanasinghe/awesome-ai-agents#gh-light-mode-only"><img src="./images/projects/awesome-ai-agents-light.svg" width="380" alt="awesome-ai-agents: Curated AI agent resources (Creator &amp; maintainer)" /></a>
-<br>
-<a href="https://github.com/ballerina-platform/ballerina-lang/tree/master/misc/debug-adapter#gh-dark-mode-only"><img src="./images/projects/ballerina-debugger.svg" width="380" alt="Ballerina Debugger: Debug adapter for Ballerina (Creator)" /></a><a href="https://github.com/ballerina-platform/ballerina-lang/tree/master/misc/debug-adapter#gh-light-mode-only"><img src="./images/projects/ballerina-debugger-light.svg" width="380" alt="Ballerina Debugger: Debug adapter for Ballerina (Creator)" /></a>
-<a href="https://github.com/ballerina-platform/ballerina-vscode#gh-dark-mode-only"><img src="./images/projects/ballerina-vs-code-extension.svg" width="380" alt="Ballerina VS Code Extension: VS Code tooling for Ballerina (Core contributor)" /></a><a href="https://github.com/ballerina-platform/ballerina-vscode#gh-light-mode-only"><img src="./images/projects/ballerina-vs-code-extension-light.svg" width="380" alt="Ballerina VS Code Extension: VS Code tooling for Ballerina (Core contributor)" /></a>
-<br>
-<a href="https://github.com/ballerina-platform/ballerina-lang/tree/master/misc/semver-checker#gh-dark-mode-only"><img src="./images/projects/ballerina-semver-checker.svg" width="380" alt="Ballerina Semver Checker: Semver checks for Ballerina (Creator)" /></a><a href="https://github.com/ballerina-platform/ballerina-lang/tree/master/misc/semver-checker#gh-light-mode-only"><img src="./images/projects/ballerina-semver-checker-light.svg" width="380" alt="Ballerina Semver Checker: Semver checks for Ballerina (Creator)" /></a>
-<a href="https://github.com/ballerina-platform/plugin-intellij#gh-dark-mode-only"><img src="./images/projects/ballerina-intellij-plugin.svg" width="380" alt="Ballerina IntelliJ Plugin: Ballerina for IntelliJ IDEA (Core contributor)" /></a><a href="https://github.com/ballerina-platform/plugin-intellij#gh-light-mode-only"><img src="./images/projects/ballerina-intellij-plugin-light.svg" width="380" alt="Ballerina IntelliJ Plugin: Ballerina for IntelliJ IDEA (Core contributor)" /></a>
-</p>
+| Project | What it is | Role |
+|---|---|---|
+| [lsp4intellij](https://github.com/ballerina-platform/lsp4intellij) | LSP client for JetBrains IDEs | Creator & maintainer |
+| [awesome-ai-agents](https://github.com/NipunaRanasinghe/awesome-ai-agents) | Curated AI agent resources | Creator & maintainer |
+| [Ballerina Debugger](https://github.com/ballerina-platform/ballerina-lang/tree/master/misc/debug-adapter) | Debug adapter for Ballerina | Creator |
+| [Ballerina VS Code Extension](https://github.com/ballerina-platform/ballerina-vscode) | VS Code tooling for Ballerina | Core contributor |
+| [Ballerina Semver Checker](https://github.com/ballerina-platform/ballerina-lang/tree/master/misc/semver-checker) | Semver checks for Ballerina | Creator |
+| [Ballerina IntelliJ Plugin](https://github.com/ballerina-platform/plugin-intellij) | Ballerina for IntelliJ IDEA | Core contributor |
 
 ---
 
@@ -76,5 +72,3 @@
 <a href="https://nipunaranasinghe.medium.com/my-5-year-journey-with-ballerina-embracing-open-source-from-day-one-ec3630a71b7e?source=rss-f8d038b7ff48------2" target="_blank"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/1" alt="Five Years with Ballerina: Lessons from Building in Open Source"></a>
 <a href="https://medium.com/ballerina-techblog/an-introduction-to-ballerina-semantic-versioning-validator-956d4884b121?source=rss-f8d038b7ff48------2" target="_blank"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@nipunaranasinghe/2" alt="Introduction to Ballerina Semantic Versioning Validator"></a>
 <!-- BLOG-POST-LIST:END -->
-
-![footer](https://capsule-render.vercel.app/api?type=waving&height=120&color=0:0D1117,50:46C0BC,100:F0A23B&section=footer)
