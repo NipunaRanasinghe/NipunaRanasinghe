@@ -5,7 +5,8 @@ Renders `header.webp`: the animated terminal header on the profile README.
 Scenes:
   1. Handshake: a CRT line opens into a terminal, `ssh` and `whoami` are typed.
   2. Identity: the `whoami` answer as a card.
-  3. Projects: `ls ~/projects` lights up each project as a glowing node in a drifting web.
+  3. Interests: `cat ~/interests` draws a radar chart of the areas I work in.
+  4. Projects: `ls ~/projects` lights up each project as a glowing node in a drifting web.
   (Integration: `bal run` starts a service and messages flow through it.
    Disabled by ENABLE_INTEGRATION_SCENE; when on, it plays between 2 and 3.)
 The last frame fades out so the loop reads as a power cycle.
@@ -329,7 +330,82 @@ def render():
         for i in range(12):
             push(flow(run, 1, 1, 1, True, 1, fade=1 - (i + 1) / 12), MOTION_MS)
 
-    # Scene 3: projects, as a living web. Faint background dots drift and link to their neighbours;
+    # Scene 3: interests. `cat ~/interests` draws a radar chart; the teal shape grows out along each axis.
+    RX, RY, RR = 440, 236, 100
+    interests = [  # (label, detail, value 0..1), clockwise from the top; neighbours are related areas
+        ("AI agents", "agentic systems · copilots", 0.95),
+        ("Integration", "WSO2 Integrator", 0.85),
+        ("Open-source community", "lsp4intellij · Ballerina", 0.7),
+        ("Languages & compilers", "Ballerina · runtimes", 0.75),
+        ("Developer tooling", "LSP · debuggers · IDEs", 0.9),
+    ]
+    cat = "cat ~/interests"
+
+    def axis_pt(k, r):
+        ang = -math.pi / 2 + k * 2 * math.pi / len(interests)
+        return RX + r * math.cos(ang), RY + r * math.sin(ang)
+
+    def radar(cmd, grid_a, grow, tt, fade=1.0, out_a=0.0):
+        img, d = frame_base(fade=fade)
+        rain.step(); rain.draw(d, 0.3 * fade)
+        prompt(d, X, Y0, cmd, cursor=grid_a == 0 and fade == 1.0, fade=fade)
+        if out_a > 0:
+            d.text((S(X + 18), S(Y0 + 24)), f"{len(interests)} areas", font=F_MONO, fill=mix(BG, DIM, out_a * fade))
+        if grid_a > 0:  # rings and axes
+            for ring in (0.25, 0.5, 0.75, 1.0):
+                pts = [axis_pt(k, RR * ring) for k in range(len(interests))]
+                d.line([(S(x), S(y)) for x, y in pts + pts[:1]], fill=mix(BG, FAINT, grid_a * fade), width=S(1))
+            for k in range(len(interests)):
+                x, y = axis_pt(k, RR)
+                d.line([S(RX), S(RY), S(x), S(y)], fill=mix(BG, FAINT, grid_a * fade), width=S(1))
+        breathe = 1 + 0.025 * math.sin(tt * 0.15)
+        shape = [axis_pt(k, RR * v * ease_out(grow) * breathe) for k, (_, _, v) in enumerate(interests)]
+        if grow > 0:
+            fill = Image.new("L", img.size, 0)
+            ImageDraw.Draw(fill).polygon([(S(x), S(y)) for x, y in shape], fill=round(255 * 0.2 * fade))
+            img.paste(Image.new("RGB", img.size, TEAL), (0, 0), fill)
+            glow = Image.new("L", img.size, 0)
+            g = ImageDraw.Draw(glow)
+            g.line([(S(x), S(y)) for x, y in shape + shape[:1]], fill=round(200 * fade), width=S(3))
+            for x, y in shape:
+                g.ellipse([S(x - 9), S(y - 9), S(x + 9), S(y + 9)], fill=round(255 * ease_out(grow) * fade))
+            img.paste(Image.new("RGB", img.size, TEAL), (0, 0), glow.filter(ImageFilter.GaussianBlur(S(8))))
+            d = ImageDraw.Draw(img)
+            d.line([(S(x), S(y)) for x, y in shape + shape[:1]], fill=mix(BG, TEAL, fade), width=S(1.5))
+            for x, y in shape:
+                d.ellipse([S(x - 4), S(y - 4), S(x + 4), S(y + 4)], fill=mix(BG, (220, 250, 248), ease_out(grow) * fade))
+        for k, (label, detail, v) in enumerate(interests):  # labels appear as the shape reaches each axis
+            a = ease_out(grow * 1.6 - 0.3 - k * 0.12) * fade
+            if a <= 0:
+                continue
+            x, y = axis_pt(k, RR + 22)
+            anchor_x = "ma" if abs(x - RX) < 10 else ("la" if x > RX else "ra")
+            ty = y - 30 if y < RY - RR * 0.9 else (y - 4 if y > RY + 10 else y - 12)
+            d.text((S(x), S(ty)), label, font=F_MONO_B, fill=mix(BG, TEXT, a), anchor=anchor_x)
+            d.text((S(x), S(ty + 18)), detail, font=F_XS, fill=mix(BG, DIM, a), anchor=anchor_x)
+        footer(d, "interests", fade)
+        return img
+
+    push(radar("", 0, 0, 0), 500)
+    for k in range(1, len(cat) + 1):
+        push(radar(cat[:k], 0, 0, 0), TYPE_MS + RNG.randint(0, 40))
+    push(radar(cat, 0, 0, 0), 300)
+    tt = 0
+    for i in range(10):  # grid fades in
+        tt += 1
+        push(radar(cat, (i + 1) / 10, 0, tt, out_a=(i + 1) / 10), MOTION_MS)
+    for i in range(32):  # shape grows out to each value
+        tt += 1
+        push(radar(cat, 1, (i + 1) / 32, tt, out_a=1), MOTION_MS)
+    for i in range(36):  # hold, breathing
+        tt += 1
+        push(radar(cat, 1, 1, tt, out_a=1), MOTION_MS)
+    push(radar(cat, 1, 1, tt, out_a=1), 1400)
+    for i in range(12):
+        tt += 1
+        push(radar(cat, 1, 1, tt, out_a=1, fade=1 - (i + 1) / 12), MOTION_MS)
+
+    # Scene 4: projects, as a living web. Faint background dots drift and link to their neighbours;
     # the projects light up one by one, link to the centre and to related projects, and signals travel the links.
     CX, CY = 440, 222
     projects = [  # (x, y, name, role, stars)
@@ -427,6 +503,8 @@ def render():
                 start = spin + k * 120
                 d.arc([S(CX - 27), S(CY - 27), S(CX + 27), S(CY + 27)], start, start + 42, fill=mix(BG, TEAL, a), width=S(1.5))
             d.ellipse([S(CX - 8), S(CY - 8), S(CX + 8), S(CY + 8)], fill=mix(BG, (236, 240, 244), a))
+            d.text((S(CX), S(CY + 36)), "localhost", font=F_MONO_B, fill=mix(BG, TEXT, a), anchor="ma",
+                   stroke_width=S(3), stroke_fill=BG)  # outline in BG hides edges passing behind
         for i, (x, y) in enumerate(nodes_now):
             n = node_a[i] * fade
             if n <= 0:
