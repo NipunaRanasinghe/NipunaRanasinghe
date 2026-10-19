@@ -3,12 +3,10 @@
 Renders `header.webp`: the animated terminal header on the profile README.
 
 Scenes:
-  1. Handshake: a CRT line opens into a terminal, `ssh` and `whoami` are typed.
+  1. Handshake: a CRT line opens into a terminal, `ssh` logs in to a banner of the name, `whoami` is typed.
   2. Identity: the `whoami` answer as a card.
-  3. Interests: `cat ~/interests` draws a radar chart of the areas I work in.
+  3. Interests: `cat ~/interests` draws a radar chart of the areas I am most interested in.
   4. Projects: `ls ~/projects` lights up each project as a glowing node in a drifting web.
-  (Integration: `bal run` starts a service and messages flow through it.
-   Disabled by ENABLE_INTEGRATION_SCENE; when on, it plays between 2 and 3.)
 The last frame fades out so the loop reads as a power cycle.
 
 Every frame is drawn with Pillow; there is no source footage. The rain uses a
@@ -40,8 +38,6 @@ FAINT = (48, 54, 61)
 TEAL = (70, 192, 188)
 AMBER = (240, 162, 59)
 
-# The integration-flow scene is kept but switched off. Set True to play it between the identity card and projects.
-ENABLE_INTEGRATION_SCENE = False
 # How much the projects web drifts (0 = still). Drift moves every pixel, so it roughly doubles the file size.
 WEB_DRIFT = float(os.environ.get("HEADER_WEB_DRIFT", "1"))
 
@@ -79,6 +75,7 @@ DISP_R = ["/System/Library/Fonts/HelveticaNeue.ttc", "/usr/share/fonts/truetype/
 F_XS = font(MONO, 10, ("Regular",))
 F_MONO = font(MONO, 14, ("Regular",))
 F_MONO_B = font(MONO_B, 14, ("Bold",))
+F_BANNER = font(MONO, 15, ("Regular",))
 F_NAME = font(DISP, 50, ("Bold",))
 F_TAG = font(DISP_R, 20, ("Regular",))
 
@@ -165,41 +162,73 @@ def render():
         img, d = frame_base(open_t=i / 9)
         push(img, MOTION_MS)
 
-    # Scene 1b: handshake.
+    # Scene 1b: handshake. `ssh` in, the login banner draws the name, then `whoami`.
     X, Y0 = 44, 52
-    status = "nipuna on master  ·  wso2 integrator"
-    lines = []  # (text, colour) printed output so far
+    BANNER = [  # "NIPUNA" in figlet's ANSI Shadow font, stored as text so there's no figlet dependency
+        "███╗   ██╗██╗██████╗ ██╗   ██╗███╗   ██╗ █████╗ ",
+        "████╗  ██║██║██╔══██╗██║   ██║████╗  ██║██╔══██╗",
+        "██╔██╗ ██║██║██████╔╝██║   ██║██╔██╗ ██║███████║",
+        "██║╚██╗██║██║██╔═══╝ ██║   ██║██║╚██╗██║██╔══██║",
+        "██║ ╚████║██║██║     ╚██████╔╝██║ ╚████║██║  ██║",
+        "╚═╝  ╚═══╝╚═╝╚═╝      ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═╝",
+    ]
+    BY, ROW = 128, 15.4  # banner top and row step: block glyphs are ~15.5 px tall, so rows must overlap slightly to join
 
-    def term(cmd, cursor, extra=()):
+    def segments(d, y, parts):
+        """Draw (text, colour, font) parts left to right, like a shell theme's prompt line."""
+        x = S(X)
+        for text, colour, f in parts:
+            d.text((x, S(y)), text, font=f, fill=colour)
+            x += d.textlength(text, font=f)
+
+    def handshake(cmd1, cursor1, login_a=0.0, rows=0.0, sub_a=0.0, cmd2=None, cursor2=False):
         img, d = frame_base()
         rain.step(); rain.draw(d, 1.0)
-        d.text((S(X), S(Y0)), status, font=F_MONO, fill=DIM)
-        y = Y0 + 26
-        for kind, text in lines + list(extra):
-            if kind == "cmd":
-                prompt(d, X, y, text, False)
-            else:
-                d.text((S(X + 18), S(y)), text, font=F_MONO, fill=kind)
-            y += 22
-        if cmd is not None:
-            prompt(d, X, y, cmd, cursor)
+        segments(d, Y0, [("nipuna", TEAL, F_MONO_B), (" in ", DIM, F_MONO), ("~/wso2", TEXT, F_MONO),
+                         (" on ", DIM, F_MONO), ("main", DIM, F_MONO), ("  took 2s", FAINT, F_MONO)])
+        prompt(d, X, Y0 + 22, cmd1, cursor1)
+        if login_a > 0:
+            d.text((S(X), S(Y0 + 48)), "Last login: Sun Oct 19 09:12:44 2026 from colombo.lk",
+                   font=F_MONO, fill=mix(BG, DIM, login_a))
+        if rows > 0:  # banner rows appear top to bottom, with a soft teal glow behind them
+            glow = Image.new("L", img.size, 0)
+            g = ImageDraw.Draw(glow)
+            shown = [(r, min(1.0, rows - r)) for r in range(len(BANNER)) if rows - r > 0]
+            for r, a in shown:
+                g.text((S(X), S(BY + r * ROW)), BANNER[r], font=F_BANNER, fill=round(160 * a))
+            img.paste(Image.new("RGB", img.size, TEAL), (0, 0), glow.filter(ImageFilter.GaussianBlur(S(6))))
+            for r, a in shown:
+                d.text((S(X), S(BY + r * ROW)), BANNER[r], font=F_BANNER, fill=mix(BG, TEAL, a))
+        if sub_a > 0:
+            d.text((S(X), S(BY + len(BANNER) * ROW + 12)), "integration · developer tooling · open source",
+                   font=F_MONO, fill=mix(BG, DIM, sub_a))
+        if cmd2 is not None:
+            segments(d, 272, [("nipuna", TEAL, F_MONO_B), ("@", DIM, F_MONO), ("wso2", TEXT, F_MONO),
+                              (" in ", DIM, F_MONO), ("~", TEXT, F_MONO)])
+            prompt(d, X, 294, cmd2, cursor2)
         footer(d, "session", 1.0)
         return img
 
-    def type_cmd(cmd):
-        for blink in range(6):  # idle cursor before typing
-            push(term("", blink % 2 == 0), 120)
+    def typed(cmd, render_with):
         for k in range(1, len(cmd) + 1):
-            push(term(cmd[:k], True), TYPE_MS + RNG.randint(0, 40))
-        push(term(cmd, True), 260)
-        lines.append(("cmd", cmd))
+            push(render_with(cmd[:k]), 32 + RNG.randint(0, 25))
 
-    type_cmd("ssh nipuna@wso2.com")
-    for out in [(DIM, "connecting to wso2.com ..."), (TEAL, "welcome back, nipuna.")]:
-        lines.append(out)
-        push(term("", True), 380)
-    type_cmd("whoami")
-    push(term(None, False), 300)
+    push(handshake("", True), 240)   # two cursor blinks before typing
+    push(handshake("", False), 240)
+    ssh = "ssh nipuna@wso2.com"
+    typed(ssh, lambda c: handshake(c, True))
+    push(handshake(ssh, False), 200)
+    for i in range(3):
+        push(handshake(ssh, False, login_a=(i + 1) / 3), MOTION_MS)
+    push(handshake(ssh, False, login_a=1), 200)
+    for i in range(12):  # banner draws in, two frames per row
+        push(handshake(ssh, False, 1, rows=(i + 1) / 2), MOTION_MS)
+    for i in range(4):
+        push(handshake(ssh, False, 1, 6, sub_a=(i + 1) / 4), MOTION_MS)
+    push(handshake(ssh, False, 1, 6, 1), 900)   # a beat to read the banner
+    push(handshake(ssh, False, 1, 6, 1, cmd2="", cursor2=True), 240)
+    typed("whoami", lambda c: handshake(ssh, False, 1, 6, 1, cmd2=c, cursor2=True))
+    push(handshake(ssh, False, 1, 6, 1, cmd2="whoami"), 250)
 
     # Scene 2: identity card. Fades in, holds, fades out.
     rows = [("role", "technical lead · wso2"),
@@ -233,102 +262,6 @@ def render():
     push(card(1.0), 3600)  # hold long enough to read the card
     for i in range(12):
         push(card(1.0, fade=1 - (i + 1) / 12), MOTION_MS)
-
-    if ENABLE_INTEGRATION_SCENE:
-        # Integration flow (disabled by default). `bal run`, then the service's flow with messages moving through it.
-        nodes = {  # name: (x, y, title, subtitle), boxes are 150 x 46 layout px
-            "in": (40, 190, "http:Listener", "POST /orders"),
-            "val": (240, 190, "validate", "json → Order"),
-            "map": (440, 190, "transform", "Order → Event"),
-            "kafka": (680, 140, "kafka:Producer", "orders.events"),
-            "db": (680, 240, "mysql:Client", "INSERT orders"),
-        }
-        BW, BH = 150, 46
-        order = ["in", "val", "map", "kafka", "db"]
-
-        def edge_path(a, b):
-            ax, ay = nodes[a][0] + BW, nodes[a][1] + BH / 2
-            bx, by = nodes[b][0], nodes[b][1] + BH / 2
-            if ay == by:
-                return [(ax, ay), (bx, by)]
-            mx = (ax + bx) / 2
-            return [(ax, ay), (mx, ay), (mx, by), (bx, by)]
-
-        edges = [("in", "val"), ("val", "map"), ("map", "kafka"), ("map", "db")]
-        routes = [edge_path("in", "val") + edge_path("val", "map")[1:] + edge_path("map", t)[1:] for t in ("kafka", "db")]
-
-        def point_on(path, s):
-            """Point at fraction `s` of the polyline's length."""
-            segs = [((x0, y0), (x1, y1), abs(x1 - x0) + abs(y1 - y0)) for (x0, y0), (x1, y1) in zip(path, path[1:])]
-            dist = s * sum(L for *_, L in segs)
-            for p0, p1, L in segs:
-                if dist <= L:
-                    k = dist / L if L else 0
-                    return p0[0] + (p1[0] - p0[0]) * k, p0[1] + (p1[1] - p0[1]) * k
-                dist -= L
-            return path[-1]
-
-        def draw_polyline(d, path, s, colour):
-            """Draw the first `s` fraction of `path`."""
-            pts = [path[0]] + [point_on(path, s * k / 24) for k in range(1, 25)]
-            d.line([(S(x), S(y)) for x, y in pts], fill=colour, width=S(1), joint="curve")
-
-        packets = []  # [route index, progress 0..1]
-        stats = {"req": 1180}
-
-        def flow(cmd, out_a, node_t, edge_t, packets_on, caption_a, fade=1.0):
-            img, d = frame_base(fade=fade)
-            rain.step(); rain.draw(d, 0.45 * fade)  # quieter: the diagram shares the right side
-            prompt(d, X, Y0, cmd, cursor=out_a == 0 and fade == 1.0, fade=fade)
-            if out_a > 0:
-                d.text((S(X + 18), S(Y0 + 24)), "Running executable · listening on :9090", font=F_MONO,
-                       fill=mix(BG, DIM, out_a * fade))
-            for i, (a, b) in enumerate(edges):
-                s = ease_out(edge_t * 2.5 - i * 0.35)
-                if s > 0:
-                    draw_polyline(d, edge_path(a, b), s, mix(BG, FAINT if not packets_on else (60, 90, 92), fade))
-            for r, s in (packets if packets_on else []):
-                x, y = point_on(routes[r], s)
-                d.ellipse([S(x - 6), S(y - 6), S(x + 6), S(y + 6)], fill=mix(BG, TEAL, 0.18 * fade))
-                d.ellipse([S(x - 2.5), S(y - 2.5), S(x + 2.5), S(y + 2.5)], fill=mix(BG, TEAL, fade))
-            for i, n in enumerate(order):
-                a = ease_out(node_t * 3 - i * 0.45) * fade
-                if a <= 0:
-                    continue
-                x, y, title, sub = nodes[n]
-                d.rounded_rectangle([S(x), S(y), S(x + BW), S(y + BH)], radius=S(6), fill=mix(BG, (22, 27, 34), a),
-                                    outline=mix(BG, (60, 68, 77), a), width=S(1))
-                d.text((S(x + 12), S(y + 8)), title, font=F_MONO, fill=mix(BG, TEXT, a))
-                d.text((S(x + 12), S(y + 28)), sub, font=F_XS, fill=mix(BG, DIM, a))
-            if packets_on:
-                line = f"requests {stats['req']:,}  ·  avg latency 8 ms"
-                d.text((S(X + 18), S(318)), line, font=F_MONO, fill=mix(BG, AMBER, fade))
-            if caption_a > 0:
-                d.text((S(X + 18), S(346)), "integrations as code.", font=F_MONO, fill=mix(BG, DIM, caption_a * fade))
-            footer(d, "integration", fade)
-            return img
-
-        run = "bal run order_sync.bal"
-        push(flow("", 0, 0, 0, False, 0), 600)  # empty prompt before typing
-        for k in range(1, len(run) + 1):
-            push(flow(run[:k], 0, 0, 0, False, 0), TYPE_MS + RNG.randint(0, 40))
-        push(flow(run, 0, 0, 0, False, 0), 300)
-        for i in range(6):
-            push(flow(run, (i + 1) / 6, 0, 0, False, 0), MOTION_MS)
-        for i in range(24):  # nodes and edges build left to right
-            push(flow(run, 1, i / 23, i / 23, False, 0), MOTION_MS)
-        for i in range(70):  # messages flow
-            if i % 5 == 0:
-                packets.append([i // 5 % 2, 0.0])
-            for p in packets:
-                p[1] += 0.03
-            done = [p for p in packets if p[1] >= 1]
-            stats["req"] += len(done) * 7
-            packets[:] = [p for p in packets if p[1] < 1]
-            push(flow(run, 1, 1, 1, True, min(1, max(0, (i - 30) / 12))), MOTION_MS)
-        push(flow(run, 1, 1, 1, True, 1), 1600)
-        for i in range(12):
-            push(flow(run, 1, 1, 1, True, 1, fade=1 - (i + 1) / 12), MOTION_MS)
 
     # Scene 3: interests. `cat ~/interests` draws a radar chart; the teal shape grows out along each axis.
     RX, RY, RR = 440, 236, 100
