@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/header/header.webp" width="880" alt="Terminal animation: ssh and whoami, an identity card for Nipuna Ranasinghe (Technical Lead at WSO2, 8+ years in integration and developer tooling, ex-ML researcher at SUTD), then ls ~/projects lighting up lsp4intellij, awesome-ai-agents, the Ballerina debugger, VS Code extension, semver checker and IntelliJ plugin" />
+  <img src="./assets/header/header.webp" width="880" alt="Terminal animation: ssh into wso2 and run neofetch, showing Nipuna Ranasinghe, Technical Lead at WSO2 building WSO2 Integrator and Ballerina, 8+ years in integration platforms and developer tooling, previously machine learning research at SUTD; then cat ~/interests draws a radar chart of AI agents, integration, open-source community, languages and compilers, and developer tooling; then ls ~/projects lights up lsp4intellij, awesome-ai-agents, the Ballerina debugger, VS Code extension, semver checker and IntelliJ plugin" />
 </p>
 
 <p align="center">

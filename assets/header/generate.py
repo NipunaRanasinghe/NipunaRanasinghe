@@ -3,10 +3,10 @@
 Renders `header.webp`: the animated terminal header on the profile README.
 
 Scenes:
-  1. Handshake: a CRT line opens into a terminal, `ssh` logs in to a banner of the name, `whoami` is typed.
-  2. Identity: the `whoami` answer as a card.
-  3. Interests: `cat ~/interests` draws a radar chart of the areas I am most interested in.
-  4. Projects: `ls ~/projects` lights up each project as a glowing node in a drifting web.
+  1. Handshake: a CRT line opens into a terminal, `ssh` logs in, and `neofetch` prints who I am
+     beside a faint, glowing WSO2 logo.
+  2. Interests: `cat ~/interests` draws a radar chart of the areas I am most interested in.
+  3. Projects: `ls ~/projects` lights up each project as a glowing node in a drifting web.
 The last frame fades out so the loop reads as a power cycle.
 
 Every frame is drawn with Pillow; there is no source footage. The rain uses a
@@ -41,7 +41,7 @@ AMBER = (240, 162, 59)
 # How much the projects web drifts (0 = still). Drift moves every pixel, so it roughly doubles the file size.
 WEB_DRIFT = float(os.environ.get("HEADER_WEB_DRIFT", "1"))
 
-TYPE_MS = 45     # a frame where a character lands
+TYPE_MS = 32     # a frame where a character lands
 MOTION_MS = 40   # a frame where only something moves
 RNG = random.Random(7)
 
@@ -69,25 +69,30 @@ def font(candidates, size, index_names=()):
 
 MONO = ["/System/Library/Fonts/Menlo.ttc", "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"]
 MONO_B = ["/System/Library/Fonts/Menlo.ttc", "/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf"]
-DISP = ["/System/Library/Fonts/HelveticaNeue.ttc", "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf"]
-DISP_R = ["/System/Library/Fonts/HelveticaNeue.ttc", "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf"]
 
-F_XS = font(MONO, 10, ("Regular",))
+F_XS = font(MONO, 12, ("Regular",))
 F_MONO = font(MONO, 14, ("Regular",))
 F_MONO_B = font(MONO_B, 14, ("Bold",))
-F_BANNER = font(MONO, 15, ("Regular",))
-F_NAME = font(DISP, 50, ("Bold",))
-F_TAG = font(DISP_R, 20, ("Regular",))
 
 
-# The WSO2 symbol (the circle with the pulse line) is the left square of the logo.
-_logo = Image.open(os.path.join(HERE, "wso2-logo.png")).convert("RGBA")
-WSO2_MARK = _logo.crop((0, 0, _logo.height, _logo.height)).resize((S(230), S(230)), Image.LANCZOS).getchannel("A")
+# The full WSO2 logo (mark and wordmark); the mark alone reads as a heart-rate icon.
+LOGO_W = 280
+_logo = Image.open(os.path.join(HERE, "wso2-logo.png")).getchannel("A")
+LOGO_H = round(LOGO_W * _logo.height / _logo.width)
+WSO2_LOGO = _logo.resize((S(LOGO_W), S(LOGO_H)), Image.LANCZOS)
 
 
 def mix(a, b, t):
     t = max(0.0, min(1.0, t))
     return tuple(round(a[i] + (b[i] - a[i]) * t) for i in range(3))
+
+
+def paste_glow(img, mask, blur, colour=TEAL, gain=1.0):
+    """Blur `mask` and paste `colour` through it: a soft glow behind whatever the mask outlines."""
+    halo = mask.filter(ImageFilter.GaussianBlur(S(blur)))
+    if gain != 1.0:
+        halo = halo.point(lambda v: min(255, v * gain))
+    img.paste(Image.new("RGB", img.size, colour), (0, 0), halo)
 
 
 def ease_out(t):
@@ -157,61 +162,82 @@ def render():
         frames.append(img)
         delays.append(round(ms / 10) * 10)
 
+    def typed(cmd, render_with, base=TYPE_MS, jitter=25):
+        """One frame per character, with uneven gaps so it reads as typing."""
+        for k in range(1, len(cmd) + 1):
+            push(render_with(cmd[:k]), base + RNG.randint(0, jitter))
+
+    def fade_out(render_fade):
+        """12 frames fading the scene to black; `render_fade(i, fade)` draws frame i."""
+        for i in range(12):
+            push(render_fade(i, 1 - (i + 1) / 12), MOTION_MS)
+
     # Scene 1a: CRT line opens.
     for i in range(10):
         img, d = frame_base(open_t=i / 9)
         push(img, MOTION_MS)
 
-    # Scene 1b: handshake. `ssh` in, the login banner draws the name, then `whoami`.
+    # Scene 1b: handshake. `ssh` in, then `neofetch` prints who I am beside a faint, glowing WSO2 logo.
     X, Y0 = 44, 52
-    BANNER = [  # "NIPUNA" in figlet's ANSI Shadow font, stored as text so there's no figlet dependency
-        "███╗   ██╗██╗██████╗ ██╗   ██╗███╗   ██╗ █████╗ ",
-        "████╗  ██║██║██╔══██╗██║   ██║████╗  ██║██╔══██╗",
-        "██╔██╗ ██║██║██████╔╝██║   ██║██╔██╗ ██║███████║",
-        "██║╚██╗██║██║██╔═══╝ ██║   ██║██║╚██╗██║██╔══██║",
-        "██║ ╚████║██║██║     ╚██████╔╝██║ ╚████║██║  ██║",
-        "╚═╝  ╚═══╝╚═╝╚═╝      ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═╝",
-    ]
-    BY, ROW = 128, 15.4  # banner top and row step: block glyphs are ~15.5 px tall, so rows must overlap slightly to join
+    INFO = [("name", "Nipuna Ranasinghe"),
+            ("role", "technical lead · wso2"),
+            ("building", "wso2 integrator · ballerina"),
+            ("uptime", "8+ years"),
+            ("focus", "integration platforms · developer tooling"),
+            ("before", "machine learning research · sutd")]
+    PALETTE = [FAINT, mix(BG, TEAL, 0.45), TEAL, mix(TEAL, (255, 255, 255), 0.4),
+               mix(BG, AMBER, 0.55), AMBER, DIM, TEXT]
+    AY, IX = 178, X  # info block top and left
 
-    def segments(d, y, parts):
+    def segments(d, y, parts, fade=1.0):
         """Draw (text, colour, font) parts left to right, like a shell theme's prompt line."""
         x = S(X)
         for text, colour, f in parts:
-            d.text((x, S(y)), text, font=f, fill=colour)
+            d.text((x, S(y)), text, font=f, fill=mix(BG, colour, fade))
             x += d.textlength(text, font=f)
 
-    def handshake(cmd1, cursor1, login_a=0.0, rows=0.0, sub_a=0.0, cmd2=None, cursor2=False):
-        img, d = frame_base()
-        rain.step(); rain.draw(d, 1.0)
+    def handshake(cmd1, cursor1, login_a=0.0, cmd2=None, cursor2=False, t=0.0, fade=1.0):
+        """`t` runs 0..1 as neofetch prints: art rows top to bottom, info lines a beat behind."""
+        img, d = frame_base(fade=fade)
+        rain.step(); rain.draw(d, fade)
         segments(d, Y0, [("nipuna", TEAL, F_MONO_B), (" in ", DIM, F_MONO), ("~/wso2", TEXT, F_MONO),
-                         (" on ", DIM, F_MONO), ("main", DIM, F_MONO), ("  took 2s", FAINT, F_MONO)])
-        prompt(d, X, Y0 + 22, cmd1, cursor1)
+                         (" on ", DIM, F_MONO), ("main", DIM, F_MONO)], fade)
+        prompt(d, X, Y0 + 22, cmd1, cursor1, fade)
         if login_a > 0:
             d.text((S(X), S(Y0 + 48)), "Last login: Sun Oct 19 09:12:44 2026 from colombo.lk",
-                   font=F_MONO, fill=mix(BG, DIM, login_a))
-        if rows > 0:  # banner rows appear top to bottom, with a soft teal glow behind them
-            glow = Image.new("L", img.size, 0)
-            g = ImageDraw.Draw(glow)
-            shown = [(r, min(1.0, rows - r)) for r in range(len(BANNER)) if rows - r > 0]
-            for r, a in shown:
-                g.text((S(X), S(BY + r * ROW)), BANNER[r], font=F_BANNER, fill=round(160 * a))
-            img.paste(Image.new("RGB", img.size, TEAL), (0, 0), glow.filter(ImageFilter.GaussianBlur(S(6))))
-            for r, a in shown:
-                d.text((S(X), S(BY + r * ROW)), BANNER[r], font=F_BANNER, fill=mix(BG, TEAL, a))
-        if sub_a > 0:
-            d.text((S(X), S(BY + len(BANNER) * ROW + 12)), "integration · developer tooling · open source",
-                   font=F_MONO, fill=mix(BG, DIM, sub_a))
+                   font=F_MONO, fill=mix(BG, DIM, login_a * fade))
         if cmd2 is not None:
-            segments(d, 272, [("nipuna", TEAL, F_MONO_B), ("@", DIM, F_MONO), ("wso2", TEXT, F_MONO),
-                              (" in ", DIM, F_MONO), ("~", TEXT, F_MONO)])
-            prompt(d, X, 294, cmd2, cursor2)
-        footer(d, "session", 1.0)
+            segments(d, 126, [("nipuna", TEAL, F_MONO_B), ("@", DIM, F_MONO), ("wso2", TEXT, F_MONO),
+                              (" in ", DIM, F_MONO), ("~", TEXT, F_MONO)], fade)
+            prompt(d, X, 148, cmd2, cursor2, fade)
+        # The faint WSO2 logo sits on the right from the first frame; its glow breathes every 2 s.
+        pulse = (1 - math.cos(sum(delays) / 2000 * 2 * math.pi)) / 2
+        mask = Image.new("L", img.size, 0)
+        mask.paste(WSO2_LOGO, (S(W - 50 - LOGO_W), S(230 - LOGO_H / 2)))
+        paste_glow(img, mask, 12, TEAL, gain=(0.15 + 0.35 * pulse) * fade)
+        img.paste(Image.new("RGB", img.size, mix(BG, TEAL, (0.16 + 0.12 * pulse) * fade)), (0, 0), mask)
+        if t > 0:
+            a = ease_out(t * 3 - 0.3) * fade
+            hx = S(IX)
+            for text, colour in [("nipuna", TEAL), ("@", DIM), ("wso2", TEAL)]:
+                d.text((hx, S(AY)), text, font=F_MONO_B, fill=mix(BG, colour, a))
+                hx += d.textlength(text, font=F_MONO_B)
+            d.text((S(IX), S(AY + 20)), "-" * 11, font=F_MONO, fill=mix(BG, FAINT, a))
+            for i, (k, v) in enumerate(INFO):
+                a = ease_out(t * 3 - 0.6 - i * 0.2) * fade
+                y = AY + 44 + i * 21
+                d.text((S(IX), S(y)), k, font=F_MONO_B, fill=mix(BG, TEAL, a))
+                lead = " " + "." * (10 - len(k)) + " "
+                kx = S(IX) + d.textlength(k, font=F_MONO_B)
+                d.text((kx, S(y)), lead, font=F_MONO, fill=mix(BG, FAINT, a))
+                d.text((kx + d.textlength(lead, font=F_MONO), S(y)), v, font=F_MONO,
+                       fill=mix(BG, AMBER if k == "uptime" else TEXT, a))
+            a = ease_out(t * 3 - 1.9) * fade
+            for i, c in enumerate(PALETTE):  # neofetch's colour blocks, in the theme's colours
+                x = IX + i * 26
+                d.rectangle([S(x), S(AY + 180), S(x + 22), S(AY + 192)], fill=mix(BG, c, a))
+        footer(d, "session", fade)
         return img
-
-    def typed(cmd, render_with):
-        for k in range(1, len(cmd) + 1):
-            push(render_with(cmd[:k]), 32 + RNG.randint(0, 25))
 
     push(handshake("", True), 240)   # two cursor blinks before typing
     push(handshake("", False), 240)
@@ -221,54 +247,23 @@ def render():
     for i in range(3):
         push(handshake(ssh, False, login_a=(i + 1) / 3), MOTION_MS)
     push(handshake(ssh, False, login_a=1), 200)
-    for i in range(12):  # banner draws in, two frames per row
-        push(handshake(ssh, False, 1, rows=(i + 1) / 2), MOTION_MS)
-    for i in range(4):
-        push(handshake(ssh, False, 1, 6, sub_a=(i + 1) / 4), MOTION_MS)
-    push(handshake(ssh, False, 1, 6, 1), 900)   # a beat to read the banner
-    push(handshake(ssh, False, 1, 6, 1, cmd2="", cursor2=True), 240)
-    typed("whoami", lambda c: handshake(ssh, False, 1, 6, 1, cmd2=c, cursor2=True))
-    push(handshake(ssh, False, 1, 6, 1, cmd2="whoami"), 250)
-
-    # Scene 2: identity card. Fades in, holds, fades out.
-    rows = [("role", "technical lead · wso2"),
-            ("building", "wso2 integrator · ballerina"),
-            ("experience", "8+ years · integration & developer tooling"),
-            ("before", "machine learning research · sutd")]
-
-    def card(t, fade=1.0):
-        img, d = frame_base(fade=fade)
-        rain.step(); rain.draw(d, fade)
-        mark_c = mix(BG, TEAL, 0.16 * ease_out(t * 2 - 0.4) * fade)  # faint watermark
-        img.paste(Image.new("RGB", WSO2_MARK.size, mark_c), (S(W - 60 - 230), S(92)), mask=WSO2_MARK)
-        name_c =mix(BG, (236, 240, 244), ease_out(t * 3) * fade)
-        d.text((S(70), S(64)), "Nipuna Ranasinghe", font=F_NAME, fill=name_c)
-        rule_w = 300 * ease_out(t * 2.2 - 0.3)
-        if rule_w > 0:
-            d.line([S(72), S(136), S(72 + rule_w), S(136)], fill=mix(BG, TEAL, fade), width=S(2))
-        tag = "Integration platforms & developer tooling."
-        d.text((S(72), S(152)), tag, font=F_TAG, fill=mix(BG, DIM, ease_out(t * 2.5 - 0.6) * fade))
-        for i, (k, v) in enumerate(rows):
-            a = ease_out(t * 3 - 1.2 - i * 0.25) * fade
-            y = 206 + i * 26
-            d.text((S(72), S(y)), k, font=F_MONO, fill=mix(BG, DIM, a))
-            d.text((S(190), S(y)), v, font=F_MONO, fill=mix(BG, AMBER if k == "experience" else TEXT, a))
-        footer(d, "identity", fade)
-        return img
-
-    N = 36
+    push(handshake(ssh, False, 1, cmd2="", cursor2=True), 240)
+    typed("neofetch", lambda c: handshake(ssh, False, 1, cmd2=c, cursor2=True))
+    push(handshake(ssh, False, 1, cmd2="neofetch"), 250)
+    N = 24
     for i in range(N):
-        push(card(i / (N - 1)), MOTION_MS)
-    push(card(1.0), 3600)  # hold long enough to read the card
-    for i in range(12):
-        push(card(1.0, fade=1 - (i + 1) / 12), MOTION_MS)
+        push(handshake(ssh, False, 1, cmd2="neofetch", t=(i + 1) / N), MOTION_MS)
+    for i in range(36):  # hold long enough to read, in short frames so the mark keeps breathing
+        push(handshake(ssh, False, 1, cmd2="neofetch", t=1), 170)
+    fade_out(lambda i, f: handshake(ssh, False, 1, cmd2="neofetch", t=1, fade=f))
 
-    # Scene 3: interests. `cat ~/interests` draws a radar chart; the teal shape grows out along each axis.
+    # Scene 2: interests. `cat ~/interests` draws a radar chart; the teal shape grows out along each axis.
     RX, RY, RR = 440, 236, 100
+    RADAR_FLOOR = 0.4  # the centre plots this value, not 0, so the gaps between close ratings show
     interests = [  # (label, detail, value 0..1), clockwise from the top; neighbours are related areas
         ("AI agents", "agentic systems · copilots", 0.95),
         ("Integration", "WSO2 Integrator", 0.85),
-        ("Open-source community", "lsp4intellij · Ballerina", 0.7),
+        ("Open-source community", "maintaining · contributing", 0.7),
         ("Languages & compilers", "Ballerina · runtimes", 0.75),
         ("Developer tooling", "LSP · debuggers · IDEs", 0.9),
     ]
@@ -292,7 +287,8 @@ def render():
                 x, y = axis_pt(k, RR)
                 d.line([S(RX), S(RY), S(x), S(y)], fill=mix(BG, FAINT, grid_a * fade), width=S(1))
         breathe = 1 + 0.025 * math.sin(tt * 0.15)
-        shape = [axis_pt(k, RR * v * ease_out(grow) * breathe) for k, (_, _, v) in enumerate(interests)]
+        shape = [axis_pt(k, RR * (v - RADAR_FLOOR) / (1 - RADAR_FLOOR) * ease_out(grow) * breathe)
+             for k, (_, _, v) in enumerate(interests)]
         if grow > 0:
             fill = Image.new("L", img.size, 0)
             ImageDraw.Draw(fill).polygon([(S(x), S(y)) for x, y in shape], fill=round(255 * 0.2 * fade))
@@ -302,7 +298,7 @@ def render():
             g.line([(S(x), S(y)) for x, y in shape + shape[:1]], fill=round(200 * fade), width=S(3))
             for x, y in shape:
                 g.ellipse([S(x - 9), S(y - 9), S(x + 9), S(y + 9)], fill=round(255 * ease_out(grow) * fade))
-            img.paste(Image.new("RGB", img.size, TEAL), (0, 0), glow.filter(ImageFilter.GaussianBlur(S(8))))
+            paste_glow(img, glow, 8)
             d = ImageDraw.Draw(img)
             d.line([(S(x), S(y)) for x, y in shape + shape[:1]], fill=mix(BG, TEAL, fade), width=S(1.5))
             for x, y in shape:
@@ -320,8 +316,7 @@ def render():
         return img
 
     push(radar("", 0, 0, 0), 500)
-    for k in range(1, len(cat) + 1):
-        push(radar(cat[:k], 0, 0, 0), TYPE_MS + RNG.randint(0, 40))
+    typed(cat, lambda c: radar(c, 0, 0, 0))
     push(radar(cat, 0, 0, 0), 300)
     tt = 0
     for i in range(10):  # grid fades in
@@ -334,11 +329,9 @@ def render():
         tt += 1
         push(radar(cat, 1, 1, tt, out_a=1), MOTION_MS)
     push(radar(cat, 1, 1, tt, out_a=1), 1400)
-    for i in range(12):
-        tt += 1
-        push(radar(cat, 1, 1, tt, out_a=1, fade=1 - (i + 1) / 12), MOTION_MS)
+    fade_out(lambda i, f: radar(cat, 1, 1, tt + i + 1, out_a=1, fade=f))
 
-    # Scene 4: projects, as a living web. Faint background dots drift and link to their neighbours;
+    # Scene 3: projects, as a living web. Faint background dots drift and link to their neighbours;
     # the projects light up one by one, link to the centre and to related projects, and signals travel the links.
     CX, CY = 440, 222
     projects = [  # (x, y, name, role, stars)
@@ -380,10 +373,11 @@ def render():
         rain.step(); rain.draw(d, 0.3 * fade)
         prompt(d, X, Y0, cmd, cursor=centre_a == 0 and fade == 1.0, fade=fade)
         if out_a > 0:
-            d.text((S(X + 18), S(Y0 + 24)), "6 projects · 2 maintained", font=F_MONO, fill=mix(BG, DIM, out_a * fade))
+            d.text((S(X + 18), S(Y0 + 24)), f"{len(projects)} projects", font=F_MONO, fill=mix(BG, DIM, out_a * fade))
         nodes_now = [node_pos(i, tt) for i in range(6)]
         node_a = [ease_out(l * 2 - 1) for l in lit]
-        if web_a > 0:  # background web
+        if web_a > 0:  # background web, dimmed as projects light so it stays behind their labels
+            web_a *= 1 - 0.55 * sum(node_a) / len(node_a)
             pts = [drift(*p, tt) for p in dots]
             for i, p in enumerate(pts):
                 for q in pts[i + 1:]:
@@ -421,10 +415,8 @@ def render():
             px, py = p0[0] + (p1[0] - p0[0]) * k, p0[1] + (p1[1] - p0[1]) * k
             sig_pts.append((px, py))
             g.ellipse([S(px - 5), S(py - 5), S(px + 5), S(py + 5)], fill=round(150 * fade))
-        wide = glow.filter(ImageFilter.GaussianBlur(S(22))).point(lambda v: min(255, v * 1.6))
-        tight = glow.filter(ImageFilter.GaussianBlur(S(7)))
-        img.paste(Image.new("RGB", img.size, mix(BG, TEAL, 0.7)), (0, 0), wide)
-        img.paste(Image.new("RGB", img.size, TEAL), (0, 0), tight)
+        paste_glow(img, glow, 22, mix(BG, TEAL, 0.7), gain=1.6)  # wide, soft halo
+        paste_glow(img, glow, 7)                                 # tight, bright halo
         d = ImageDraw.Draw(img)
         for px, py in sig_pts:
             d.ellipse([S(px - 2), S(py - 2), S(px + 2), S(py + 2)], fill=mix(BG, (220, 250, 248), fade))
@@ -457,8 +449,7 @@ def render():
 
     tt = 0
     push(web("", 0, [0] * 6, tt, 0), 500)
-    for k in range(1, len(ls) + 1):
-        push(web(ls[:k], 0, [0] * 6, tt, 0), TYPE_MS + RNG.randint(0, 40))
+    typed(ls, lambda c: web(c, 0, [0] * 6, tt, 0))
     push(web(ls, 0, [0] * 6, tt, 0), 300)
     for i in range(8):  # centre and background web fade in
         tt += 1
@@ -471,7 +462,7 @@ def render():
         push(web(ls, 1, lit, tt, min(1.0, 0.5 + i / 30), out_a=1), MOTION_MS)
     signals = []  # [edge, progress, forwards]
     sig_rng = random.Random(5)
-    for i in range(70):  # everything lit: the web drifts and signals travel the links
+    for i in range(50):  # everything lit: the web drifts and signals travel the links
         tt += 1
         if i % 4 == 0:
             signals.append([sig_rng.choice(all_edges), 0.0, sig_rng.random() < 0.6])
@@ -480,9 +471,7 @@ def render():
         signals = [sg for sg in signals if sg[1] < 1]
         push(web(ls, 1, lit, tt, 1, signals, out_a=1), MOTION_MS)
     push(web(ls, 1, lit, tt, 1, signals, out_a=1), 1200)
-    for i in range(12):
-        tt += 1
-        push(web(ls, 1, lit, tt, 1, signals, out_a=1, fade=1 - (i + 1) / 12), MOTION_MS)
+    fade_out(lambda i, f: web(ls, 1, lit, tt + i + 1, 1, signals, out_a=1, fade=f))
     img, _ = frame_base(open_t=0.0)
     push(img, 400)
     return frames, delays
@@ -491,7 +480,7 @@ def render():
 def save(frames, delays):
     # Animated WebP: full colour (no GIF palette banding on the glow) at under half the GIF's size.
     frames[0].save(OUT, format="WEBP", save_all=True, append_images=frames[1:], duration=delays, loop=0,
-                   quality=70, method=4)
+                   quality=70, method=4, allow_mixed=True)  # mixed: no lossy residue left on the fade-out frames
     print(f"{OUT}: {len(frames)} frames, {sum(delays) / 1000:.1f}s, {os.path.getsize(OUT) / 1e6:.2f} MB")
 
 
