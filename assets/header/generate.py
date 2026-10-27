@@ -10,9 +10,9 @@ Scenes:
 The last frame fades out so the loop reads as a power cycle.
 
 Every frame is drawn with Pillow; there is no source footage. The rain uses a
-fixed seed, so a re-run produces the same file.
+fixed seed, so a re-run produces the same file unless the star counts changed.
 
-Deps: pillow >= 10
+Deps: pillow >= 10; `gh` (logged in) for live star counts, else the fallbacks are used
 Run:  python3 assets/header/generate.py
 """
 
@@ -21,6 +21,7 @@ from __future__ import annotations
 import math
 import os
 import random
+import subprocess
 
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
@@ -82,6 +83,17 @@ LOGO_H = round(LOGO_W * _logo.height / _logo.width)
 WSO2_LOGO = _logo.resize((S(LOGO_W), S(LOGO_H)), Image.LANCZOS)
 
 
+def stars(repo, fallback):
+    """Live star count via `gh`, so a re-render shows the current number; `fallback` when gh fails."""
+    try:
+        out = subprocess.run(["gh", "api", f"repos/{repo}", "--jq", ".stargazers_count"],
+                             capture_output=True, text=True, check=True, timeout=15).stdout
+        return f"★ {int(out)}"
+    except (OSError, subprocess.SubprocessError, ValueError):
+        print(f"warning: could not fetch stars for {repo}, using '{fallback}'")
+        return fallback
+
+
 def mix(a, b, t):
     t = max(0.0, min(1.0, t))
     return tuple(round(a[i] + (b[i] - a[i]) * t) for i in range(3))
@@ -114,8 +126,11 @@ class Rain:
                 d[1] = RNG.uniform(-60, 0)
                 d[3] = RNG.choice("0123456789abcdef")
 
-    def draw(self, d, alpha):
+    def draw(self, d, alpha, avoid=None):
+        """`avoid` is an (x0, y0, x1, y1) box the glyphs skip, so they never cross the logo."""
         for x, y, speed, ch in self.drops:
+            if avoid and avoid[0] - 10 < x < avoid[2] and avoid[1] - 14 < y < avoid[3]:
+                continue
             d.text((S(x), S(y)), ch, font=F_XS, fill=mix(BG, FAINT, alpha * (0.5 + speed / 3)))
 
 
@@ -188,6 +203,8 @@ def render():
     PALETTE = [FAINT, mix(BG, TEAL, 0.45), TEAL, mix(TEAL, (255, 255, 255), 0.4),
                mix(BG, AMBER, 0.55), AMBER, DIM, TEXT]
     AY, IX = 178, X  # info block top and left
+    LOGO_X, LOGO_Y = W - 50 - LOGO_W, round(230 - LOGO_H / 2)
+    LOGO_BOX = (LOGO_X, LOGO_Y, LOGO_X + LOGO_W, LOGO_Y + LOGO_H)
 
     def segments(d, y, parts, fade=1.0):
         """Draw (text, colour, font) parts left to right, like a shell theme's prompt line."""
@@ -199,12 +216,12 @@ def render():
     def handshake(cmd1, cursor1, login_a=0.0, cmd2=None, cursor2=False, t=0.0, fade=1.0):
         """`t` runs 0..1 as neofetch prints: art rows top to bottom, info lines a beat behind."""
         img, d = frame_base(fade=fade)
-        rain.step(); rain.draw(d, fade)
+        rain.step(); rain.draw(d, fade, avoid=LOGO_BOX)
         segments(d, Y0, [("nipuna", TEAL, F_MONO_B), (" in ", DIM, F_MONO), ("~/wso2", TEXT, F_MONO),
                          (" on ", DIM, F_MONO), ("main", DIM, F_MONO)], fade)
         prompt(d, X, Y0 + 22, cmd1, cursor1, fade)
         if login_a > 0:
-            d.text((S(X), S(Y0 + 48)), "Last login: Sun Oct 19 09:12:44 2026 from colombo.lk",
+            d.text((S(X), S(Y0 + 48)), "Last login: Mon Oct 19 09:12:44 2026 from colombo.lk",
                    font=F_MONO, fill=mix(BG, DIM, login_a * fade))
         if cmd2 is not None:
             segments(d, 126, [("nipuna", TEAL, F_MONO_B), ("@", DIM, F_MONO), ("wso2", TEXT, F_MONO),
@@ -213,7 +230,7 @@ def render():
         # The faint WSO2 logo sits on the right from the first frame; its glow breathes every 2 s.
         pulse = (1 - math.cos(sum(delays) / 2000 * 2 * math.pi)) / 2
         mask = Image.new("L", img.size, 0)
-        mask.paste(WSO2_LOGO, (S(W - 50 - LOGO_W), S(230 - LOGO_H / 2)))
+        mask.paste(WSO2_LOGO, (S(LOGO_X), S(LOGO_Y)))
         paste_glow(img, mask, 12, TEAL, gain=(0.15 + 0.35 * pulse) * fade)
         img.paste(Image.new("RGB", img.size, mix(BG, TEAL, (0.16 + 0.12 * pulse) * fade)), (0, 0), mask)
         if t > 0:
@@ -335,8 +352,8 @@ def render():
     # the projects light up one by one, link to the centre and to related projects, and signals travel the links.
     CX, CY = 440, 222
     projects = [  # (x, y, name, role, stars)
-        (170, 150, "lsp4intellij", "creator & maintainer", "★ 479"),
-        (710, 150, "awesome-ai-agents", "creator & maintainer", "★ 58"),
+        (170, 150, "lsp4intellij", "creator & maintainer", stars("ballerina-platform/lsp4intellij", "★ 479")),
+        (710, 150, "awesome-ai-agents", "creator & maintainer", stars("NipunaRanasinghe/awesome-ai-agents", "★ 58")),
         (130, 285, "Ballerina Debugger", "creator", ""),
         (720, 285, "Ballerina VS Code", "core contributor", ""),
         (320, 340, "Ballerina Semver Checker", "creator", ""),
@@ -428,7 +445,7 @@ def render():
                 start = spin + k * 120
                 d.arc([S(CX - 27), S(CY - 27), S(CX + 27), S(CY + 27)], start, start + 42, fill=mix(BG, TEAL, a), width=S(1.5))
             d.ellipse([S(CX - 8), S(CY - 8), S(CX + 8), S(CY + 8)], fill=mix(BG, (236, 240, 244), a))
-            d.text((S(CX), S(CY + 36)), "localhost", font=F_MONO_B, fill=mix(BG, TEXT, a), anchor="ma",
+            d.text((S(CX), S(CY + 36)), "~/projects", font=F_MONO_B, fill=mix(BG, TEXT, a), anchor="ma",
                    stroke_width=S(3), stroke_fill=BG)  # outline in BG hides edges passing behind
         for i, (x, y) in enumerate(nodes_now):
             n = node_a[i] * fade
@@ -480,7 +497,7 @@ def render():
 def save(frames, delays):
     # Animated WebP: full colour (no GIF palette banding on the glow) at under half the GIF's size.
     frames[0].save(OUT, format="WEBP", save_all=True, append_images=frames[1:], duration=delays, loop=0,
-                   quality=70, method=4, allow_mixed=True)  # mixed: no lossy residue left on the fade-out frames
+                   quality=70, method=4, allow_mixed=True, kmin=0, kmax=1)  # every frame a keyframe: no lossy residue carried between frames
     print(f"{OUT}: {len(frames)} frames, {sum(delays) / 1000:.1f}s, {os.path.getsize(OUT) / 1e6:.2f} MB")
 
 
