@@ -8,19 +8,6 @@
 
 ---
 
-### 🚀 Featured Projects
-
-| Project | What it is | Role |
-|---|---|---|
-| [lsp4intellij](https://github.com/ballerina-platform/lsp4intellij) | LSP client for JetBrains IDEs | Creator & maintainer |
-| [awesome-ai-agents](https://github.com/NipunaRanasinghe/awesome-ai-agents) | Curated AI agent resources | Creator & maintainer |
-| [Ballerina Debugger](https://github.com/ballerina-platform/ballerina-lang/tree/master/misc/debug-adapter) | Debug adapter for Ballerina | Creator |
-| [Ballerina VS Code Extension](https://github.com/ballerina-platform/ballerina-vscode) | VS Code tooling for Ballerina | Core contributor |
-| [Ballerina Semver Checker](https://github.com/ballerina-platform/ballerina-lang/tree/master/misc/semver-checker) | Semver checks for Ballerina | Creator |
-| [Ballerina IntelliJ Plugin](https://github.com/ballerina-platform/plugin-intellij) | Ballerina for IntelliJ IDEA | Core contributor |
-
----
-
 ### 🛠️ Tech Stack
 
 <p align="left">
