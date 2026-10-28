@@ -202,16 +202,17 @@ def render():
             ("before", "machine learning research · sutd")]
     PALETTE = [FAINT, mix(BG, TEAL, 0.45), TEAL, mix(TEAL, (255, 255, 255), 0.4),
                mix(BG, AMBER, 0.55), AMBER, DIM, TEXT]
-    AY, IX = 178, X  # info block top and left
+    AY, IX = 156, X  # info block top and left
     LOGO_X, LOGO_Y = W - 50 - LOGO_W, round(230 - LOGO_H / 2)
     LOGO_BOX = (LOGO_X, LOGO_Y, LOGO_X + LOGO_W, LOGO_Y + LOGO_H)
 
     def segments(d, y, parts, fade=1.0):
-        """Draw (text, colour, font) parts left to right, like a shell theme's prompt line."""
+        """Draw (text, colour, font) parts left to right, like a shell theme's prompt line; returns the end x."""
         x = S(X)
         for text, colour, f in parts:
             d.text((x, S(y)), text, font=f, fill=mix(BG, colour, fade))
             x += d.textlength(text, font=f)
+        return x
 
     def handshake(cmd1, cursor1, login_a=0.0, cmd2=None, cursor2=False, t=0.0, fade=1.0):
         """`t` runs 0..1 as neofetch prints: art rows top to bottom, info lines a beat behind."""
@@ -224,9 +225,11 @@ def render():
             d.text((S(X), S(Y0 + 48)), "Last login: Mon Oct 19 09:12:44 2026 from colombo.lk",
                    font=F_MONO, fill=mix(BG, DIM, login_a * fade))
         if cmd2 is not None:
-            segments(d, 126, [("nipuna", TEAL, F_MONO_B), ("@", DIM, F_MONO), ("wso2", TEXT, F_MONO),
-                              (" in ", DIM, F_MONO), ("~", TEXT, F_MONO)], fade)
-            prompt(d, X, 148, cmd2, cursor2, fade)
+            # The remote shell has a plain one-line prompt, unlike the themed local one.
+            cx = segments(d, 126, [("nipuna", TEAL, F_MONO_B), ("@", DIM, F_MONO), ("wso2", TEXT, F_MONO),
+                                   (":", DIM, F_MONO), ("~", TEXT, F_MONO), ("$ ", DIM, F_MONO), (cmd2, TEXT, F_MONO)], fade)
+            if cursor2:
+                d.rectangle([cx + S(1), S(128), cx + S(9), S(143)], fill=mix(BG, TEXT, fade))
         # The faint WSO2 logo sits on the right from the first frame; its glow breathes every 2 s.
         pulse = (1 - math.cos(sum(delays) / 2000 * 2 * math.pi)) / 2
         mask = Image.new("L", img.size, 0)
