@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="./assets/header/header.webp" width="880" alt="Terminal animation: ssh into wso2 and run neofetch, showing Nipuna Ranasinghe, Technical Lead at WSO2 building WSO2 Integrator and Ballerina, 8+ years in integration platforms and developer tooling, previously machine learning research at SUTD; then cat ~/interests draws a radar chart of AI agents, integration, open-source community, languages and compilers, and developer tooling; then ls ~/projects lights up lsp4intellij, awesome-ai-agents, the Ballerina debugger, VS Code extension, semver checker and IntelliJ plugin" />
+  <img src="https://komarev.com/ghpvc/?username=NipunaRanasinghe&label=Profile%20views&color=46C0BC&style=flat" alt="Profile views" /> <a href="https://gitista.com/search/?country=LK&handle=NipunaRanasinghe"><img src="https://img.shields.io/badge/Gitista-Top%2010%20Contributor%20%C2%B7%20Sri%20Lanka-F0A23B?style=flat" alt="Gitista: Top 10 Contributor · Sri Lanka" /></a> <img src="https://img.shields.io/github/followers/NipunaRanasinghe?label=Follow&style=social" alt="GitHub Followers" />
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=NipunaRanasinghe&label=Profile%20views&color=46C0BC&style=flat" alt="Profile views" /> <a href="https://gitista.com/search/?country=LK&handle=NipunaRanasinghe"><img src="https://img.shields.io/badge/Gitista-Top%205%20Contributor%20%C2%B7%20Sri%20Lanka-F0A23B?style=flat" alt="Gitista: Top 5 Contributor · Sri Lanka" /></a> <img src="https://img.shields.io/github/followers/NipunaRanasinghe?label=Follow&style=social" alt="GitHub Followers" />
+  <img src="./assets/header/header.webp" width="880" alt="Terminal animation: ssh into wso2 and run neofetch, showing Nipuna Ranasinghe, Technical Lead at WSO2 building WSO2 Integrator and Ballerina, 8+ years in integration platforms and developer tooling, previously machine learning research at SUTD; then cat ~/interests draws a radar chart of AI agents, integration, open-source community, languages and compilers, and developer tooling; then ls ~/projects lights up lsp4intellij, awesome-ai-agents, the Ballerina debugger, VS Code extension, semver checker and IntelliJ plugin" />
 </p>
 
 ---
@@ -21,15 +21,6 @@
 
 ### 📊 GitHub Analytics
 
-<p align="center">
-  <a href="https://github.com/anuraghazra/github-readme-stats#gh-dark-mode-only">
-    <img alt="Nipuna's GitHub Stats" src="https://denvercoder1-github-readme-stats.vercel.app/api/?username=NipunaRanasinghe&show_icons=true&include_all_commits=true&count_private=true&theme=react&hide_border=true&bg_color=0D1117&title_color=46C0BC&icon_color=F0A23B" height="170" />
-  </a><a href="https://github.com/anuraghazra/github-readme-stats#gh-light-mode-only">
-    <img alt="Nipuna's GitHub Stats" src="https://denvercoder1-github-readme-stats.vercel.app/api/?username=NipunaRanasinghe&show_icons=true&include_all_commits=true&count_private=true&theme=react&hide_border=true&bg_color=FFFFFF&title_color=0F766E&icon_color=B45309&text_color=1F2328&ring_color=0F766E" height="170" />
-  </a>
-  <a href="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=NipunaRanasinghe&layout=compact&theme=react&hide_border=true&bg_color=0D1117&title_color=46C0BC&icon_color=F0A23B&langs_count=8#gh-dark-mode-only"><img alt="Top Languages" src="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=NipunaRanasinghe&layout=compact&theme=react&hide_border=true&bg_color=0D1117&title_color=46C0BC&icon_color=F0A23B&langs_count=8" height="170" /></a>
-<a href="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=NipunaRanasinghe&layout=compact&theme=react&hide_border=true&bg_color=FFFFFF&title_color=0F766E&icon_color=B45309&langs_count=8&text_color=1F2328&ring_color=0F766E#gh-light-mode-only"><img alt="Top Languages" src="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=NipunaRanasinghe&layout=compact&theme=react&hide_border=true&bg_color=FFFFFF&title_color=0F766E&icon_color=B45309&langs_count=8&text_color=1F2328&ring_color=0F766E" height="170" /></a>
-</p>
 <p align="center">
   <a href="https://streak-stats.demolab.com/?user=NipunaRanasinghe&theme=react&hide_border=true&background=0D1117&stroke=46C0BC&ring=46C0BC&fire=F0A23B&currStreakLabel=46C0BC#gh-dark-mode-only"><img alt="GitHub Streak" src="https://streak-stats.demolab.com/?user=NipunaRanasinghe&theme=react&hide_border=true&background=0D1117&stroke=46C0BC&ring=46C0BC&fire=F0A23B&currStreakLabel=46C0BC" height="170" /></a>
 <a href="https://streak-stats.demolab.com/?user=NipunaRanasinghe&theme=react&hide_border=true&background=FFFFFF&stroke=D0D7DE&ring=0F766E&fire=B45309&currStreakLabel=0F766E&currStreakNum=1F2328&sideNums=1F2328&sideLabels=0F766E&dates=59636E#gh-light-mode-only"><img alt="GitHub Streak" src="https://streak-stats.demolab.com/?user=NipunaRanasinghe&theme=react&hide_border=true&background=FFFFFF&stroke=D0D7DE&ring=0F766E&fire=B45309&currStreakLabel=0F766E&currStreakNum=1F2328&sideNums=1F2328&sideLabels=0F766E&dates=59636E" height="170" /></a>
